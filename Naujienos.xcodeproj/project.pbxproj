@@ -13,6 +13,7 @@
 		293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC422346A4A00FDB81D /* Assets.xcassets */; };
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
 		293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCD222346A4A00FDB81D /* NaujienosTests.swift */; };
+		294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C3C2236E810000FA89A /* DefaultSettings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		293CBCCE22346A4A00FDB81D /* NaujienosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaujienosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		293CBCD222346A4A00FDB81D /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
 		293CBCD422346A4A00FDB81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294E4C3C2236E810000FA89A /* DefaultSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DefaultSettings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,15 @@
 		293CBCBC22346A4900FDB81D /* Naujienos */ = {
 			isa = PBXGroup;
 			children = (
+				294E4C3F2236E8AD000FA89A /* Controller */,
+				294E4C412236E8CF000FA89A /* Model */,
+				294E4C402236E8C1000FA89A /* View */,
+				294E4C3E2236E832000FA89A /* Supporting Files */,
 				293CBCBD22346A4900FDB81D /* AppDelegate.swift */,
-				293CBCBF22346A4900FDB81D /* ViewController.swift */,
-				293CBCC122346A4900FDB81D /* Main.storyboard */,
 				293CBCC422346A4A00FDB81D /* Assets.xcassets */,
-				293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */,
 				293CBCC922346A4A00FDB81D /* Info.plist */,
+				293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */,
+				293CBCC122346A4900FDB81D /* Main.storyboard */,
 			);
 			path = Naujienos;
 			sourceTree = "<group>";
@@ -90,10 +95,40 @@
 		293CBCD122346A4A00FDB81D /* NaujienosTests */ = {
 			isa = PBXGroup;
 			children = (
-				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
 				293CBCD422346A4A00FDB81D /* Info.plist */,
+				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
 			);
 			path = NaujienosTests;
+			sourceTree = "<group>";
+		};
+		294E4C3E2236E832000FA89A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				294E4C3C2236E810000FA89A /* DefaultSettings.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		294E4C3F2236E8AD000FA89A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				293CBCBF22346A4900FDB81D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		294E4C402236E8C1000FA89A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		294E4C412236E8CF000FA89A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */,
+				294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */,
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				293CBCC322346A4900FDB81D /* Main.storyboard in Resources */,
 			);
