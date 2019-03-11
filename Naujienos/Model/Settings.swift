@@ -17,11 +17,9 @@ struct Settings {
     
     var items = [SettingsItem]()
     
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Settings.plist")
-    
     mutating func load() {
-        guard let dataFilePath = dataFilePath else { return }
-        if let data = try? Data(contentsOf: dataFilePath) {
+        guard let filePath = Constants.Paths.settings else { return }
+        if let data = try? Data(contentsOf: filePath) {
             let decoder = PropertyListDecoder()
             do {
                 items = try decoder.decode([SettingsItem].self, from: data)
@@ -32,11 +30,11 @@ struct Settings {
     }
     
     func save() {
-        guard let dataFilePath = dataFilePath else { return }
+        guard let filePath = Constants.Paths.settings else { return }
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(items)
-            try data.write(to: dataFilePath)
+            try data.write(to: filePath)
         } catch {
             print("Error encoding settings, \(error)")
         }
