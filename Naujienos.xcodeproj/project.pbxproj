@@ -14,6 +14,8 @@
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
 		293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCD222346A4A00FDB81D /* NaujienosTests.swift */; };
 		294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C3C2236E810000FA89A /* DefaultSettings.plist */; };
+		294E4C452236FCAF000FA89A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C442236FCAF000FA89A /* Settings.swift */; };
+		294E4C472236FCC4000FA89A /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C462236FCC4000FA89A /* SettingsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		293CBCD222346A4A00FDB81D /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
 		293CBCD422346A4A00FDB81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		294E4C3C2236E810000FA89A /* DefaultSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DefaultSettings.plist; sourceTree = "<group>"; };
+		294E4C442236FCAF000FA89A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		294E4C462236FCC4000FA89A /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				293CBCD422346A4A00FDB81D /* Info.plist */,
 				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
+				294E4C462236FCC4000FA89A /* SettingsTests.swift */,
 			);
 			path = NaujienosTests;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 		294E4C412236E8CF000FA89A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				294E4C442236FCAF000FA89A /* Settings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294E4C452236FCAF000FA89A /* Settings.swift in Sources */,
 				293CBCC022346A4900FDB81D /* ViewController.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 			);
@@ -242,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294E4C472236FCC4000FA89A /* SettingsTests.swift in Sources */,
 				293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
