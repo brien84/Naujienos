@@ -49,6 +49,7 @@ class ArticleViewController: UITableViewController {
         
         return cell
     }
+    
 }
 
 extension ArticleViewController: FetcherDelegate {
