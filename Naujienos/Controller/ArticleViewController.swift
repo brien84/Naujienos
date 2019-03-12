@@ -15,7 +15,7 @@ class ArticleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         
         fetcher.delegate = self
         fetcher.fetch()
@@ -27,9 +27,16 @@ class ArticleViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleViewCell
         
-        cell.textLabel?.text = fetcher.articles[indexPath.row].title
+        let item = fetcher.articles[indexPath.row]
+        
+        cell.title.text = item.title
+        // TODO: add timeSincePublished to Article model.
+        //cell.timeSincePublished.text =
+        cell.articleDescription.text = item.description
+        cell.provider.text = item.provider
+        cell.category.text = item.category
         
         return cell
     }
