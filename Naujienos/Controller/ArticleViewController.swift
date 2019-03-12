@@ -25,6 +25,7 @@ class ArticleViewController: UITableViewController {
     
     private func setupNavigationBarItems() {
         let settingsButton = UIButton(type: .contactAdd)
+        settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: settingsButton)
         
         let bookmarksButton = UIButton(type: .contactAdd)
@@ -48,6 +49,11 @@ class ArticleViewController: UITableViewController {
         cell.category.text = item.category
         
         return cell
+    }
+    
+    @objc private func openSettings() {
+        let vc = SettingsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
