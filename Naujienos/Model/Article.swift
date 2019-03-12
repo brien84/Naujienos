@@ -18,4 +18,56 @@ struct Article: Codable {
     let provider: String
     let category: String
     
+    var timeSincePublished: String {
+        return date.timeSincePublished
+    }
+}
+
+extension Date {
+    var timeSincePublished: String {
+        
+        let now = Date()
+        let components = Calendar.current.dateComponents([.day, .hour, .minute], from: self, to: now)
+        
+        if let days = components.day, days > 0 {
+            let remainder = days % 10
+            switch true {
+            case remainder == 0:
+                return "prieš \(days) dienų"
+            case remainder == 1,
+                 11...19 ~= days:
+                return "prieš \(days) dieną"
+            default:
+                return "prieš \(days) dienas"
+            }
+        }
+        
+        if let hours = components.hour, hours > 0 {
+            let remainder = hours % 10
+            switch true {
+            case remainder == 0:
+                return "prieš \(hours) valandų"
+            case remainder == 1,
+                 11...19 ~= hours:
+                return "prieš \(hours) valandą"
+            default:
+                return "prieš \(hours) valandas"
+            }
+        }
+        
+        if let minutes = components.minute, minutes > 0 {
+            let remainder = minutes % 10
+            switch true {
+            case remainder == 0:
+                return "prieš \(minutes) minučių"
+            case remainder == 1,
+                 11...19 ~= minutes:
+                return "prieš \(minutes) minutę"
+            default:
+                return "prieš \(minutes) minutes"
+            }
+        }
+        
+        return "dabar"
+    }
 }
