@@ -47,7 +47,10 @@ class ArticleFetcher {
     /**
      Loads Settings items and encodes them to JSON. Then creates an URLRequest with the JSON in URLRequest's body.
     
-     - Note: The JSON data is used for querying the API. API will only return articles under categories, which are marked as true. This is an example of the JSON:
+     - Note: The JSON data is used for querying the API. API will only return articles under categories, which are marked as true.
+     
+     This is an example of the JSON:
+     
      [{"categories":{"_main":true,"business":false},"provider":"delfi"},{"categories":{"_main":true,"business":false},"provider":"15min"}]
     
      - Returns: URLRequest or nil if conversion to JSON fails.
