@@ -32,8 +32,7 @@ class ArticleViewController: UITableViewController {
         let item = fetcher.articles[indexPath.row]
         
         cell.title.text = item.title
-        // TODO: add timeSincePublished to Article model.
-        //cell.timeSincePublished.text =
+        cell.timeSincePublished.text = item.timeSincePublished
         cell.articleDescription.text = item.description
         cell.provider.text = item.provider
         cell.category.text = item.category
