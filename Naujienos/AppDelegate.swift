@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         createDefaultSettings()
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: ArticleViewController())
+        window?.makeKeyAndVisible()
+        
         return true
     }
     

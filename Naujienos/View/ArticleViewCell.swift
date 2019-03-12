@@ -20,12 +20,4 @@ class ArticleViewCell: UITableViewCell {
         super.awakeFromNib()
         
     }
-    
-//    let url: URL
-//    let title: String
-//    let date: Date
-//    let description: String
-//    let imageURL: URL
-//    let provider: String
-//    let category: String
 }
