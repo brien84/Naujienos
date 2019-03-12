@@ -14,11 +14,21 @@ class ArticleViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBarItems()
 
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         
         fetcher.delegate = self
         fetcher.fetch()
+    }
+    
+    private func setupNavigationBarItems() {
+        let settingsButton = UIButton(type: .contactAdd)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: settingsButton)
+        
+        let bookmarksButton = UIButton(type: .contactAdd)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: bookmarksButton)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
