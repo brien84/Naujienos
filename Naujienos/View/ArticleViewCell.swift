@@ -16,8 +16,14 @@ class ArticleViewCell: UITableViewCell {
     @IBOutlet weak var provider: UILabel!
     @IBOutlet weak var category: UILabel!
     
+    @IBOutlet weak var bookmarkButton: BookmarkButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    override func prepareForReuse() {
+        self.bookmarkButton.isSelected = false
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class ArticleViewController: UITableViewController {
     
     let fetcher = ArticleFetcher()
+    var bookmarks = Bookmarks()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,11 @@ class ArticleViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleViewCell
         
+        cell.bookmarkButton.delegate = self
+        
         let item = fetcher.articles[indexPath.row]
+        
+        cell.bookmarkButton.isSelected = bookmarks.contains(item)
         
         cell.title.text = item.title
         cell.timeSincePublished.text = item.timeSincePublished
@@ -82,5 +87,22 @@ extension ArticleViewController: FetcherProtocol {
 extension ArticleViewController: SettingsProtocol {
     func settingsUpdated() {
         refreshData()
+    }
+}
+
+extension ArticleViewController: BookmarkButtonProtocol {
+    func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer) {
+        if let indexPath = self.tableView?.indexPathForRow(at: gestureRecognizer.location(in: self.tableView)) {
+            
+            let item = fetcher.articles[indexPath.row]
+            
+            if bookmarks.contains(item) {
+                bookmarks.remove(item)
+            } else {
+                bookmarks.add(item)
+            }
+            
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
 }
