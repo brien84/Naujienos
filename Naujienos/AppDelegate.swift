@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Check if Settings file already exists and if not create Settings.plist from bundle file DefaultSettings.plist.
     private func createDefaultSettings() {
         
-        guard let settingsFilePath = Constants.Paths.settings?.path else {
+        guard let settingsFilePath = Constants.URLs.settings?.path else {
             fatalError("Could not construct Settings file path.")
         }
         

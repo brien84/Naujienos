@@ -19,8 +19,8 @@ struct Settings {
     
     /// Decodes SettingsItems from Settings file to items array.
     /// Is called on init!
-    mutating func load() {
-        guard let filePath = Constants.Paths.settings else { return }
+    private mutating func load() {
+        guard let filePath = Constants.URLs.settings else { return }
         if let data = try? Data(contentsOf: filePath) {
             let decoder = PropertyListDecoder()
             do {
@@ -33,7 +33,7 @@ struct Settings {
     
     /// Encodes items array and writes to Settings file.
     func save() {
-        guard let filePath = Constants.Paths.settings else { return }
+        guard let filePath = Constants.URLs.settings else { return }
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(items)
