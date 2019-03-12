@@ -44,12 +44,12 @@ class ArticleViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: bookmarksButton)
     }
     
+    // MARK: - TableView methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetcher.articles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleViewCell
         
         let item = fetcher.articles[indexPath.row]
@@ -63,6 +63,7 @@ class ArticleViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Navigation methods
     @objc private func openSettings() {
         let vc = SettingsViewController()
         vc.delegate = self

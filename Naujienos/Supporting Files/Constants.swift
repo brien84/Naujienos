@@ -12,7 +12,9 @@ struct Constants {
     
     struct URLs {
         static let server: URL? = URL(string: "http://142.93.60.232:8080/filter")
+        
         static let settings: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Settings.plist")
+        static let bookmarks: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("SavedArticles.plist")
     }
     
 }
