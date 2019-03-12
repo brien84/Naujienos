@@ -58,7 +58,7 @@ class ArticleViewController: UITableViewController {
     
 }
 
-extension ArticleViewController: FetcherDelegate {
+extension ArticleViewController: FetcherProtocol {
     func finishedFetching() {
         tableView.reloadData()
     }

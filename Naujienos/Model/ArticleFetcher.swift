@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol FetcherDelegate: AnyObject {
+protocol FetcherProtocol: AnyObject {
     func finishedFetching()
 }
 
 class ArticleFetcher {
     
-    weak var delegate: FetcherDelegate?
+    weak var delegate: FetcherProtocol?
 
     var articles = [Article]()
     
