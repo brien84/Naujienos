@@ -17,6 +17,7 @@
 		294E4C452236FCAF000FA89A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C442236FCAF000FA89A /* Settings.swift */; };
 		294E4C472236FCC4000FA89A /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C462236FCC4000FA89A /* SettingsTests.swift */; };
 		294E4C4B223701FF000FA89A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4A223701FF000FA89A /* Constants.swift */; };
+		294E4C4D2237FF1A000FA89A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4C2237FF1A000FA89A /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		294E4C442236FCAF000FA89A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		294E4C462236FCC4000FA89A /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		294E4C4A223701FF000FA89A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		294E4C4C2237FF1A000FA89A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				294E4C442236FCAF000FA89A /* Settings.swift */,
+				294E4C4C2237FF1A000FA89A /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				293CBCC022346A4900FDB81D /* ViewController.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 				294E4C4B223701FF000FA89A /* Constants.swift in Sources */,
+				294E4C4D2237FF1A000FA89A /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
