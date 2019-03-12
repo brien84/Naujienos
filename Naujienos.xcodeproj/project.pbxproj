@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCBD22346A4900FDB81D /* AppDelegate.swift */; };
-		293CBCC022346A4900FDB81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCBF22346A4900FDB81D /* ViewController.swift */; };
 		293CBCC322346A4900FDB81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC122346A4900FDB81D /* Main.storyboard */; };
 		293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC422346A4A00FDB81D /* Assets.xcassets */; };
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
@@ -20,6 +19,7 @@
 		294E4C4D2237FF1A000FA89A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4C2237FF1A000FA89A /* Article.swift */; };
 		294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */; };
 		294E4C51223829DD000FA89A /* ArticleFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */; };
+		294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5222382B04000FA89A /* ArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 /* Begin PBXFileReference section */
 		293CBCBA22346A4900FDB81D /* Naujienos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naujienos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293CBCBD22346A4900FDB81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		293CBCBF22346A4900FDB81D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		293CBCC222346A4900FDB81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		293CBCC422346A4A00FDB81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293CBCC722346A4A00FDB81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		294E4C4C2237FF1A000FA89A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetcher.swift; sourceTree = "<group>"; };
 		294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetcherTests.swift; sourceTree = "<group>"; };
+		294E4C5222382B04000FA89A /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +107,10 @@
 		293CBCD122346A4A00FDB81D /* NaujienosTests */ = {
 			isa = PBXGroup;
 			children = (
+				294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */,
 				293CBCD422346A4A00FDB81D /* Info.plist */,
 				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
 				294E4C462236FCC4000FA89A /* SettingsTests.swift */,
-				294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */,
 			);
 			path = NaujienosTests;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 		294E4C3F2236E8AD000FA89A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				293CBCBF22346A4900FDB81D /* ViewController.swift */,
+				294E4C5222382B04000FA89A /* ArticleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294E4C452236FCAF000FA89A /* Settings.swift in Sources */,
-				293CBCC022346A4900FDB81D /* ViewController.swift in Sources */,
+				294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */,
 				294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 				294E4C4B223701FF000FA89A /* Constants.swift in Sources */,
