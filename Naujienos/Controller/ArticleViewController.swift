@@ -16,10 +16,22 @@ class ArticleViewController: UITableViewController {
         super.viewDidLoad()
         
         setupNavigationBarItems()
+        setupRefreshControl()
 
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         
         fetcher.delegate = self
+        
+        refreshData()
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshData), for: UIControl.Event.valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        refreshControl?.beginRefreshing()
         fetcher.fetch()
     }
     
@@ -53,6 +65,7 @@ class ArticleViewController: UITableViewController {
     
     @objc private func openSettings() {
         let vc = SettingsViewController()
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -60,6 +73,13 @@ class ArticleViewController: UITableViewController {
 
 extension ArticleViewController: FetcherProtocol {
     func finishedFetching() {
+        refreshControl?.endRefreshing()
         tableView.reloadData()
+    }
+}
+
+extension ArticleViewController: SettingsProtocol {
+    func settingsUpdated() {
+        refreshData()
     }
 }
