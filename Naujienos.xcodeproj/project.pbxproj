@@ -25,6 +25,7 @@
 		294E4C5922383998000FA89A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5822383998000FA89A /* SettingsViewController.swift */; };
 		294E4C5B2238500F000FA89A /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5A2238500F000FA89A /* Bookmarks.swift */; };
 		294E4C5D22385026000FA89A /* BookmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5C22385026000FA89A /* BookmarksTests.swift */; };
+		294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5E2238533F000FA89A /* BookmarkButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		294E4C5822383998000FA89A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		294E4C5A2238500F000FA89A /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
 		294E4C5C22385026000FA89A /* BookmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTests.swift; sourceTree = "<group>"; };
+		294E4C5E2238533F000FA89A /* BookmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				294E4C5422382F1C000FA89A /* ArticleViewCell.swift */,
 				294E4C5522382F1C000FA89A /* ArticleViewCell.xib */,
+				294E4C5E2238533F000FA89A /* BookmarkButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294E4C452236FCAF000FA89A /* Settings.swift in Sources */,
+				294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */,
 				294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */,
 				294E4C5B2238500F000FA89A /* Bookmarks.swift in Sources */,
 				294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */,
