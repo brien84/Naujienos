@@ -42,6 +42,12 @@ class ArticleViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = WebViewController()
+        vc.articleToDisplay = datasource[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension ArticleViewController: BookmarkButtonProtocol {
