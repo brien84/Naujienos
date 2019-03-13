@@ -9,10 +9,9 @@
 import UIKit
 
 class BookmarksViewController: ArticleViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         datasource = bookmarks.articles
     }
 }

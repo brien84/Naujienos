@@ -109,7 +109,7 @@
 		293CBCBC22346A4900FDB81D /* Naujienos */ = {
 			isa = PBXGroup;
 			children = (
-				294E4C3F2236E8AD000FA89A /* Controller */,
+				294E4C3F2236E8AD000FA89A /* Controllers */,
 				294E4C412236E8CF000FA89A /* Model */,
 				294E4C402236E8C1000FA89A /* View */,
 				294E4C3E2236E832000FA89A /* Supporting Files */,
@@ -143,7 +143,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		294E4C3F2236E8AD000FA89A /* Controller */ = {
+		294E4C3F2236E8AD000FA89A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				294E4C5222382B04000FA89A /* ArticleViewController.swift */,
@@ -152,7 +152,7 @@
 				294E4C5822383998000FA89A /* SettingsViewController.swift */,
 				294E4C6422399725000FA89A /* WebViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		294E4C402236E8C1000FA89A /* View */ = {

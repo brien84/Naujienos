@@ -11,12 +11,17 @@ import UIKit
 class ArticleViewController: UITableViewController {
     
     var datasource = [Article]()
-    var bookmarks = Bookmarks()
+    var bookmarks: Bookmarks!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        bookmarks = Bookmarks()
     }
         
     // MARK: - TableView methods
