@@ -27,6 +27,7 @@
 		294E4C5D22385026000FA89A /* BookmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5C22385026000FA89A /* BookmarksTests.swift */; };
 		294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5E2238533F000FA89A /* BookmarkButton.swift */; };
 		294E4C6122397508000FA89A /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6022397508000FA89A /* MainFeedViewController.swift */; };
+		294E4C6322397C02000FA89A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6222397C02000FA89A /* BookmarksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		294E4C5C22385026000FA89A /* BookmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTests.swift; sourceTree = "<group>"; };
 		294E4C5E2238533F000FA89A /* BookmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkButton.swift; sourceTree = "<group>"; };
 		294E4C6022397508000FA89A /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
+		294E4C6222397C02000FA89A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				294E4C5222382B04000FA89A /* ArticleViewController.swift */,
+				294E4C6222397C02000FA89A /* BookmarksViewController.swift */,
 				294E4C6022397508000FA89A /* MainFeedViewController.swift */,
 				294E4C5822383998000FA89A /* SettingsViewController.swift */,
 			);
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294E4C6322397C02000FA89A /* BookmarksViewController.swift in Sources */,
 				294E4C452236FCAF000FA89A /* Settings.swift in Sources */,
 				294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */,
 				294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */,
