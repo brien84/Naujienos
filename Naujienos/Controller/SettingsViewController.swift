@@ -28,6 +28,7 @@ class SettingsViewController: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         if changesMade {
             settings.save()
             delegate?.settingsUpdated()

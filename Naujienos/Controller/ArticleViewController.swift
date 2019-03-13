@@ -20,6 +20,7 @@ class ArticleViewController: UITableViewController {
     }
         
     // MARK: - TableView methods
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
     }

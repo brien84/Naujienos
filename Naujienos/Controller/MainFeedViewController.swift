@@ -35,6 +35,7 @@ class MainFeedViewController: ArticleViewController {
     }
     
     // MARK: - Setup methods
+    
     private func setupNavigationBarItems() {
         let settingsButton = UIButton(type: .contactAdd)
         settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
@@ -51,6 +52,7 @@ class MainFeedViewController: ArticleViewController {
     }
     
     // MARK: - Navigation methods
+    
     @objc private func openSettings() {
         let vc = SettingsViewController()
         vc.delegate = self
