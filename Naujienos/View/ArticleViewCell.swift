@@ -24,9 +24,9 @@ class ArticleViewCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: Constants.TableView.spacingBetweenCells, right: 0))
     }
     
-//    override func awakeFromNib() {
-//        self.selectionStyle = .none
-//    }
+    override func awakeFromNib() {
+        self.selectionStyle = .none
+    }
     
     override func prepareForReuse() {
         self.articleImage.image = nil
