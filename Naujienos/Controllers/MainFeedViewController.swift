@@ -23,7 +23,7 @@ class MainFeedViewController: ArticleViewController {
         refreshData()
     }
     
-    /// override with tableView.reloadData incase Bookmarks changed before returning to this VC
+    /// overrides with tableView.reloadData incase Bookmarks changed before returning to this VC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()

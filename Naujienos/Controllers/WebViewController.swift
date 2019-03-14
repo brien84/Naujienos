@@ -36,16 +36,18 @@ class WebViewController: UIViewController {
         openArticle(with: url)
     }
     
+    private func openArticle(with url: URL) {
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             loadingBar.progress =  Float(webView.estimatedProgress)
         }
     }
     
-    private func openArticle(with url: URL) {
-        let request = URLRequest(url: url)
-        webView.load(request)
-    }
+    // MARK: - Setup methods
     
     private func setupWebView() {
         webView = WKWebView()

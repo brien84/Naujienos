@@ -50,11 +50,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jme-q4-dws" customClass="BookmarkButton" customModule="Naujienos" customModuleProvider="target">
-                        <rect key="frame" x="4" y="128.5" width="322" height="70"/>
+                        <rect key="frame" x="4" y="128.5" width="322" height="30"/>
                         <state key="normal" title="Button"/>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-13-k5t" customClass="NetworkImageView" customModule="Naujienos" customModuleProvider="target">
+                        <rect key="frame" x="4" y="162.5" width="322" height="36"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="i4K-13-k5t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="1DE-SX-zVe"/>
                     <constraint firstItem="RC5-Rl-YYU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="1XA-Xl-hLg"/>
                     <constraint firstItem="ece-3M-v1s" firstAttribute="top" secondItem="RC5-Rl-YYU" secondAttribute="bottom" constant="4" id="24P-sS-oK2"/>
                     <constraint firstAttribute="trailing" secondItem="OyD-co-vDL" secondAttribute="trailing" constant="4" id="2hw-ww-jgQ"/>
@@ -62,14 +66,16 @@
                     <constraint firstItem="OyD-co-vDL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="A3k-NC-cKy"/>
                     <constraint firstItem="ece-3M-v1s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="AgZ-aj-RMw"/>
                     <constraint firstItem="Jme-q4-dws" firstAttribute="top" secondItem="OyD-co-vDL" secondAttribute="bottom" constant="4" id="Cgg-ZG-to9"/>
+                    <constraint firstAttribute="trailing" secondItem="i4K-13-k5t" secondAttribute="trailing" constant="4" id="HPH-t7-Y1R"/>
                     <constraint firstAttribute="trailing" secondItem="RC5-Rl-YYU" secondAttribute="trailing" constant="4" id="OGV-AJ-jQV"/>
                     <constraint firstAttribute="trailing" secondItem="Jme-q4-dws" secondAttribute="trailing" constant="4" id="QnF-BW-8wF"/>
                     <constraint firstAttribute="trailing" secondItem="nRR-kb-Vgu" secondAttribute="trailing" constant="4" id="QtM-Iv-nZa"/>
-                    <constraint firstAttribute="bottom" secondItem="Jme-q4-dws" secondAttribute="bottom" constant="4" id="S8w-QE-bxE"/>
                     <constraint firstAttribute="trailing" secondItem="ece-3M-v1s" secondAttribute="trailing" constant="4" id="TAm-04-naS"/>
                     <constraint firstItem="dR0-qY-R3p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="YUs-bh-qw9"/>
                     <constraint firstItem="nRR-kb-Vgu" firstAttribute="top" secondItem="ece-3M-v1s" secondAttribute="bottom" constant="4" id="baj-3O-RwD"/>
+                    <constraint firstItem="i4K-13-k5t" firstAttribute="top" secondItem="Jme-q4-dws" secondAttribute="bottom" constant="4" id="blD-Pq-hAO"/>
                     <constraint firstAttribute="trailing" secondItem="dR0-qY-R3p" secondAttribute="trailing" constant="4" id="cfb-tK-Qsr"/>
+                    <constraint firstAttribute="bottom" secondItem="i4K-13-k5t" secondAttribute="bottom" constant="4" id="cff-h1-4li"/>
                     <constraint firstItem="dR0-qY-R3p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="kR2-db-Obq"/>
                     <constraint firstItem="RC5-Rl-YYU" firstAttribute="top" secondItem="dR0-qY-R3p" secondAttribute="bottom" constant="4" id="oOb-1A-Pd8"/>
                     <constraint firstItem="OyD-co-vDL" firstAttribute="top" secondItem="nRR-kb-Vgu" secondAttribute="bottom" constant="4" id="uNY-Vm-8PA"/>
@@ -79,6 +85,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="articleDescription" destination="ece-3M-v1s" id="UCK-XK-0Ea"/>
+                <outlet property="articleImage" destination="i4K-13-k5t" id="Pao-6q-jCR"/>
                 <outlet property="bookmarkButton" destination="Jme-q4-dws" id="ru3-gG-j9X"/>
                 <outlet property="category" destination="OyD-co-vDL" id="0Q8-ek-hcj"/>
                 <outlet property="provider" destination="nRR-kb-Vgu" id="Ls0-dI-C0z"/>
