@@ -6,9 +6,13 @@
 //  Copyright © 2019 Marius. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
+    
+    struct Colors {
+        
+    }
     
     struct URLs {
         static let server: URL? = URL(string: "http://142.93.60.232:8080/filter")

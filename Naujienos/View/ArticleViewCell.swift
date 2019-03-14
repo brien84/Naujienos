@@ -13,9 +13,7 @@ class ArticleViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var timeSincePublished: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
-    @IBOutlet weak var provider: UILabel!
-    @IBOutlet weak var category: UILabel!
-    
+
     @IBOutlet weak var articleImage: NetworkImageView!
     
     @IBOutlet weak var bookmarkButton: BookmarkButton!

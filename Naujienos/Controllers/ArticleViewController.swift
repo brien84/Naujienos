@@ -44,8 +44,6 @@ class ArticleViewController: UITableViewController {
         cell.title.text = item.title
         cell.timeSincePublished.text = item.timeSincePublished
         cell.articleDescription.text = item.description
-        cell.provider.text = item.provider
-        cell.category.text = item.category
         
         return cell
     }
