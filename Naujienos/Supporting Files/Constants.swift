@@ -15,7 +15,7 @@ struct Constants {
     }
     
     struct Colors {
-        
+        static let background = UIColor(red: 241/255, green: 242/255, blue: 246/255, alpha: 1.0) 
     }
     
     struct URLs {
