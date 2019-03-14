@@ -68,7 +68,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-9v-a8J" userLabel="Description">
-                                <rect key="frame" x="16" y="395.5" width="343" height="52.5"/>
+                                <rect key="frame" x="16" y="481" width="343" height="52.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -86,8 +86,8 @@
                             <constraint firstItem="cKW-Qg-dHr" firstAttribute="leading" secondItem="Ffv-xq-xhz" secondAttribute="leading" id="GOp-hO-OYn"/>
                             <constraint firstAttribute="trailing" secondItem="vbe-9v-a8J" secondAttribute="trailing" constant="16" id="HCf-Q7-5qQ"/>
                             <constraint firstItem="7Jr-KX-89Z" firstAttribute="leading" secondItem="Ffv-xq-xhz" secondAttribute="leading" constant="16" id="NGE-oW-nfS"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vbe-9v-a8J" secondAttribute="bottom" constant="16" id="OqJ-mP-zse"/>
-                            <constraint firstItem="vbe-9v-a8J" firstAttribute="top" secondItem="7Jr-KX-89Z" secondAttribute="bottom" constant="16" id="U1q-b3-DS6"/>
+                            <constraint firstAttribute="bottom" secondItem="vbe-9v-a8J" secondAttribute="bottom" constant="16" id="OqJ-mP-zse"/>
+                            <constraint firstItem="vbe-9v-a8J" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Jr-KX-89Z" secondAttribute="bottom" constant="16" id="U1q-b3-DS6"/>
                             <constraint firstAttribute="trailing" secondItem="7Jr-KX-89Z" secondAttribute="trailing" constant="16" id="gmY-vd-2vX"/>
                             <constraint firstItem="vbe-9v-a8J" firstAttribute="leading" secondItem="Ffv-xq-xhz" secondAttribute="leading" constant="16" id="iYK-yz-jsM"/>
                             <constraint firstAttribute="trailing" secondItem="cKW-Qg-dHr" secondAttribute="trailing" id="maH-3b-mrd"/>
@@ -95,6 +95,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Ffv-xq-xhz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="86C-YB-IfA"/>
                     <constraint firstAttribute="trailing" secondItem="Ffv-xq-xhz" secondAttribute="trailing" id="GiP-do-9Le"/>
@@ -105,6 +106,7 @@
                     <constraint firstAttribute="bottom" secondItem="Ffv-xq-xhz" secondAttribute="bottom" id="q2o-GH-U0M"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="articleDescription" destination="vbe-9v-a8J" id="r6f-Oo-jGF"/>

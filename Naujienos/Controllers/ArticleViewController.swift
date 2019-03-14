@@ -17,6 +17,10 @@ class ArticleViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        
+//        tableView.backgroundColor = UIColor(red: 241/255, green: 242/255, blue: 246/255, alpha: 1.0)  //rgb(241, 242, 246)
+//        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 600.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
