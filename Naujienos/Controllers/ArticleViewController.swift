@@ -71,7 +71,7 @@ extension ArticleViewController: BookmarkButtonProtocol {
                 bookmarks.add(item)
             }
             
-            tableView.reloadRows(at: [indexPath], with: .automatic)
+            tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
 }
