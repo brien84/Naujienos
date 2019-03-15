@@ -37,6 +37,10 @@ class MainFeedViewController: ArticleViewController {
     // MARK: - Setup methods
     
     private func setupNavigationBarItems() {
+        let titleView = UIImageView(image: UIImage(named: "newspaper"))
+        titleView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleView
+        
         let settingsButton = UIButton(type: .custom)
         settingsButton.setImage(UIImage(named: "settingsGear"), for: .normal)
         settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
