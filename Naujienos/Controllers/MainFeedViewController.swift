@@ -37,11 +37,13 @@ class MainFeedViewController: ArticleViewController {
     // MARK: - Setup methods
     
     private func setupNavigationBarItems() {
-        let settingsButton = UIButton(type: .contactAdd)
+        let settingsButton = UIButton(type: .custom)
+        settingsButton.setImage(UIImage(named: "settingsGear"), for: .normal)
         settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: settingsButton)
         
-        let bookmarksButton = UIButton(type: .contactAdd)
+        let bookmarksButton = UIButton(type: .custom)
+        bookmarksButton.setImage(UIImage(named: "bookmarkOff"), for: .normal)
         bookmarksButton.addTarget(self, action: #selector(openBookmarks), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: bookmarksButton)
     }
