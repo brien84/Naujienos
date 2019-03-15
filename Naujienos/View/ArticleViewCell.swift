@@ -16,6 +16,8 @@ class ArticleViewCell: UITableViewCell {
 
     @IBOutlet weak var articleImage: NetworkImageView!
     
+    @IBOutlet weak var providerIcon: UIImageView!
+    
     @IBOutlet weak var bookmarkButton: BookmarkButton!
     
     override func awakeFromNib() {

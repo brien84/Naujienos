@@ -44,6 +44,7 @@ class ArticleViewController: UITableViewController {
         cell.bookmarkButton.isSelected = bookmarks.contains(item)
         
         cell.articleImage.url = item.imageURL
+        cell.providerIcon.image = UIImage(named: item.provider)
         
         cell.title.text = item.title
         cell.timeSincePublished.text = item.timeSincePublished

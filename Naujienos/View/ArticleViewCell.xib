@@ -22,9 +22,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQT-6Y-Umv" userLabel="Top Bar">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ysl-6T-1cH" userLabel="Provider Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delfi" translatesAutoresizingMaskIntoConstraints="NO" id="Ysl-6T-1cH" userLabel="Provider Icon">
                                 <rect key="frame" x="8" y="8" width="34" height="34"/>
-                                <color key="backgroundColor" red="0.078431372550000003" green="0.96078431369999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ysl-6T-1cH" secondAttribute="height" multiplier="1:1" id="Tvn-O4-Ix6"/>
                                 </constraints>
@@ -121,6 +120,7 @@
                 <outlet property="articleDescription" destination="vbe-9v-a8J" id="r6f-Oo-jGF"/>
                 <outlet property="articleImage" destination="cKW-Qg-dHr" id="2Go-dw-mEM"/>
                 <outlet property="bookmarkButton" destination="tTF-vO-8u2" id="dLZ-0J-9pU"/>
+                <outlet property="providerIcon" destination="Ysl-6T-1cH" id="zJd-KF-wf6"/>
                 <outlet property="timeSincePublished" destination="3wo-bq-ezj" id="ERq-d3-7CJ"/>
                 <outlet property="title" destination="7Jr-KX-89Z" id="bZM-FS-oNK"/>
             </connections>
@@ -129,5 +129,6 @@
     </objects>
     <resources>
         <image name="bookmarkOn" width="25" height="25"/>
+        <image name="delfi" width="225" height="225"/>
     </resources>
 </document>
