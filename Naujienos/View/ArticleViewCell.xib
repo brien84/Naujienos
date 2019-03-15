@@ -35,13 +35,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-vO-8u2" customClass="BookmarkButton" customModule="Naujienos" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-vO-8u2" customClass="BookmarkButton" customModule="Naujienos" customModuleProvider="target">
                                 <rect key="frame" x="333" y="8" width="34" height="34"/>
-                                <color key="backgroundColor" red="0.078431372550000003" green="0.96078431369999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tTF-vO-8u2" secondAttribute="height" multiplier="1:1" id="HeW-iC-haH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="bookmarkOn"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,4 +127,7 @@
             <point key="canvasLocation" x="144.80000000000001" y="225.78710644677662"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="bookmarkOn" width="25" height="25"/>
+    </resources>
 </document>

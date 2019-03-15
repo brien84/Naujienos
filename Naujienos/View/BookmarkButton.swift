@@ -27,8 +27,9 @@ class BookmarkButton: UIButton {
     }
     
     private func setupButton() {
-        self.setTitle("X", for: .selected)
-        self.setTitle("O", for: .normal)
+        
+        self.setImage(UIImage(named: "bookmarkOff"), for: .normal)
+        self.setImage(UIImage(named: "bookmarkOn"), for: .selected)
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonTapped)))
     }

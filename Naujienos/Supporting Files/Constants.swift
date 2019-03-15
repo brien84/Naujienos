@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     
     struct TableView {
-        static let spacingBetweenCells: CGFloat = 15.0
+        
     }
     
     struct Colors {
