@@ -31,9 +31,10 @@ class NetworkImageView: UIImageView {
     }
     
     override func awakeFromNib() {
+        activityIndicator.color = Constants.Colors.red
         activityIndicator.center = self.center
-        addSubview(activityIndicator)
         activityIndicator.startAnimating()
+        addSubview(activityIndicator)
     }
     
     private func loadImage() {
