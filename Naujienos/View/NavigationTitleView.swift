@@ -17,7 +17,6 @@ class NavigationTitleView: UIView {
     }
     
     lazy private var icon = { () -> UIImageView in
-        print("Setting Up Icon!")
         let icon = UIImageView(image: UIImage(named: "newspaper"))
         icon.frame = self.frame
         icon.contentMode = .scaleAspectFit
@@ -26,7 +25,6 @@ class NavigationTitleView: UIView {
     }()
     
     lazy private var indicator = { () -> UIActivityIndicatorView in
-        print("Setting Up Indicator!")
         let indicator = UIActivityIndicatorView(style: .gray)
         indicator.frame = self.frame
         indicator.center = self.center

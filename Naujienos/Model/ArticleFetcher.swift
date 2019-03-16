@@ -21,8 +21,6 @@ class ArticleFetcher {
     /// Sends request to the API. If request is succesful, response data is decoded to array of Article and sorted by most recent.
     func fetch() {
         
-        print("FETCH")
-        
         articles.removeAll()
         
         guard let request = prepareRequest() else { return }
@@ -40,7 +38,7 @@ class ArticleFetcher {
             }
             
             self.articles = self.articles.sorted(by: { $0.date > $1.date})
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.delegate?.finishedFetching()
             }
             

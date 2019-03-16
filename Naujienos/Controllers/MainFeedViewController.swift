@@ -31,7 +31,7 @@ class MainFeedViewController: ArticleViewController {
     }
     
     @objc private func refreshData() {
-        refreshControl?.beginRefreshing()
+        refreshControl?.endRefreshing()
         titleView.isLoading = true
         fetcher.fetch()
     }
@@ -39,7 +39,6 @@ class MainFeedViewController: ArticleViewController {
     // MARK: - Setup methods
     
     private func setupNavigationBarItems() {
-    
         navigationItem.titleView = titleView
         
         let settingsButton = UIButton(type: .custom)
@@ -55,6 +54,10 @@ class MainFeedViewController: ArticleViewController {
     
     private func setupRefreshControl() {
         refreshControl = UIRefreshControl()
+        refreshControl?.tintColor = Constants.Colors.red
+        let refreshTitle = NSAttributedString(string: "Atnaujinti",
+                                              attributes: [NSAttributedString.Key.foregroundColor:Constants.Colors.red])
+        refreshControl?.attributedTitle = refreshTitle
         refreshControl?.addTarget(self, action: #selector(refreshData), for: UIControl.Event.valueChanged)
     }
     
@@ -76,7 +79,6 @@ extension MainFeedViewController: FetcherDelegate {
     func finishedFetching() {
         datasource = fetcher.articles
         tableView.reloadData()
-        refreshControl?.endRefreshing()
         titleView.isLoading = false
     }
 }
