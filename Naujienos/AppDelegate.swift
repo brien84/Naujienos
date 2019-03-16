@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navController.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor:Constants.Colors.dark,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 20)!
+            NSAttributedString.Key.font: Constants.Fonts.navigationControllerTitle
         ]
         navController.navigationBar.backgroundColor = Constants.Colors.backgroundWhite
         navController.navigationBar.tintColor = Constants.Colors.red

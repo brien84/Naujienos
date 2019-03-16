@@ -19,10 +19,14 @@ struct Constants {
     
     struct Colors {
         static let red = UIColor(red: 255/255, green: 71/255, blue: 87/255, alpha: 1.0)                 //#ff4757
-        static let dark = UIColor(red: 47/255, green: 53/255, blue: 66/255, alpha: 1.0)             //#2f3542
-        static let gray = UIColor(red: 87/255, green: 96/255, blue: 111/255, alpha: 1.0)            //#57606f
+        static let dark = UIColor(red: 47/255, green: 53/255, blue: 66/255, alpha: 1.0)                 //#2f3542
+        static let gray = UIColor(red: 87/255, green: 96/255, blue: 111/255, alpha: 1.0)                //#57606f
         static let backgroundGray = UIColor(red: 241/255, green: 242/255, blue: 246/255, alpha: 1.0)    //#f1f2f6
         static let backgroundWhite = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)   //#ffffff
+    }
+    
+    struct Fonts {
+        static let navigationControllerTitle = UIFont(name: "HelveticaNeue-Light", size: 20)!
     }
     
     struct URLs {
