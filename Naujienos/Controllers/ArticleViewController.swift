@@ -18,7 +18,7 @@ class ArticleViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         
-        tableView.backgroundColor = Constants.Colors.background
+        tableView.backgroundColor = Constants.Colors.backgroundGray
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 600.0
     }

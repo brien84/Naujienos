@@ -32,7 +32,6 @@
 		294E4C672239A5C9000FA89A /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C662239A5C9000FA89A /* NetworkImageView.swift */; };
 		294E4C71223C35F1000FA89A /* SettingsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */; };
 		294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */; };
-		294E4C75223C51D8000FA89A /* SettingsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */; };
 		294E4C79223D1D4D000FA89A /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */; };
 		294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -77,7 +76,6 @@
 		294E4C662239A5C9000FA89A /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionHeader.swift; sourceTree = "<group>"; };
 		294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSectionHeader.xib; sourceTree = "<group>"; };
-		294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableHeaderView.xib; sourceTree = "<group>"; };
 		294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,7 +193,6 @@
 			children = (
 				294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */,
 				294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */,
-				294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */,
 				294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */,
 				294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */,
 			);
@@ -285,7 +282,6 @@
 			files = (
 				293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */,
 				294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */,
-				294E4C75223C51D8000FA89A /* SettingsTableHeaderView.xib in Resources */,
 				294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */,
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */,

@@ -18,10 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         createDefaultSettings()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: MainFeedViewController())
+        let navigationController = createNavigationController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func createNavigationController() -> UINavigationController {
+        let navController = UINavigationController(rootViewController: MainFeedViewController())
+        
+        navController.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Constants.Colors.dark,
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 20)!
+        ]
+        navController.navigationBar.backgroundColor = Constants.Colors.backgroundWhite
+        navController.navigationBar.tintColor = Constants.Colors.red
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.topItem?.title = ""
+        
+        return navController
     }
     
     /// Check if Settings file already exists and if not create Settings.plist from bundle file DefaultSettings.plist.

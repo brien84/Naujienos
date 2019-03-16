@@ -37,13 +37,6 @@ class SettingsViewController: UITableViewController {
         
         /// Setup NavigationController
         navigationItem.title = "Nustatymai"
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor:Constants.Colors.red,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 20)!
-        ]
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.topItem?.title = ""
-        navigationController?.navigationBar.tintColor = Constants.Colors.red
         
         /// Setup TableView
         tableView.register(UINib(nibName: "SettingsSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
@@ -53,11 +46,6 @@ class SettingsViewController: UITableViewController {
         tableView.sectionHeaderHeight = Constants.TableView.Settings.sectionHeaderHeight
         tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
         
-        /// Add TableViewHeader
-        if let tableHeaderView = Bundle.main.loadNibNamed("SettingsTableHeaderView", owner: nil, options: nil)?.first as? UIView {
-            tableHeaderView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: tableView.sectionHeaderHeight / 3)
-            self.tableView.tableHeaderView = tableHeaderView
-        }
     }
     
     /// If changes were made, saves Settings and calls delegate method.
