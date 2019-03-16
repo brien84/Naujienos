@@ -59,6 +59,8 @@ class WebViewController: UIViewController {
     
     private func setupNavigationController() {
         /// Setup loading bar.
+        navigationItem.title = articleToDisplay.provider
+        
         loadingBar = UIProgressView(progressViewStyle: .default)
         if let navigationBarBounds = self.navigationController?.navigationBar.bounds {
             /// Sets loading bar position to the bottom of navigation bar.
