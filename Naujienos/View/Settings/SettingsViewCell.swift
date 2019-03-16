@@ -10,14 +10,11 @@ import UIKit
 
 class SettingsViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.tintColor = Constants.Colors.red
-        self.selectionStyle = .none
-    }
-
     @IBOutlet weak var title: UILabel!
     
-
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = .none
+        self.tintColor = Constants.Colors.red
+    }
 }

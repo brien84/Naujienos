@@ -11,6 +11,7 @@ import UIKit
 class MainFeedViewController: ArticleViewController {
     
     let fetcher = ArticleFetcher()
+    let titleView = NavigationTitleView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,14 @@ class MainFeedViewController: ArticleViewController {
     
     @objc private func refreshData() {
         refreshControl?.beginRefreshing()
+        titleView.isLoading = true
         fetcher.fetch()
     }
     
     // MARK: - Setup methods
     
     private func setupNavigationBarItems() {
-        let titleView = UIImageView(image: UIImage(named: "newspaper"))
-        titleView.contentMode = .scaleAspectFit
+    
         navigationItem.titleView = titleView
         
         let settingsButton = UIButton(type: .custom)
@@ -76,6 +77,7 @@ extension MainFeedViewController: FetcherDelegate {
         datasource = fetcher.articles
         tableView.reloadData()
         refreshControl?.endRefreshing()
+        titleView.isLoading = false
     }
 }
 

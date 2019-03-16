@@ -34,6 +34,7 @@
 		294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */; };
 		294E4C79223D1D4D000FA89A /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */; };
 		294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */; };
+		294E4C7E223D802F000FA89A /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7D223D802F000FA89A /* NavigationTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSectionHeader.xib; sourceTree = "<group>"; };
 		294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
+		294E4C7D223D802F000FA89A /* NavigationTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				294E4C5522382F1C000FA89A /* ArticleViewCell.xib */,
 				294E4C5E2238533F000FA89A /* BookmarkButton.swift */,
 				294E4C662239A5C9000FA89A /* NetworkImageView.swift */,
+				294E4C7D223D802F000FA89A /* NavigationTitleView.swift */,
 				294E4C76223D1CF8000FA89A /* Settings */,
 			);
 			path = View;
@@ -307,6 +310,7 @@
 				294E4C6322397C02000FA89A /* BookmarksViewController.swift in Sources */,
 				294E4C452236FCAF000FA89A /* Settings.swift in Sources */,
 				294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */,
+				294E4C7E223D802F000FA89A /* NavigationTitleView.swift in Sources */,
 				294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */,
 				294E4C5B2238500F000FA89A /* Bookmarks.swift in Sources */,
 				294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */,
