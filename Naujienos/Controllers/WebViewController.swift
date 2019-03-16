@@ -99,7 +99,7 @@ extension WebViewController: WKNavigationDelegate {
     }
 }
 
-extension WebViewController: BookmarkButtonProtocol {
+extension WebViewController: BookmarkButtonDelegate {
     func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer) {
         if bookmarks.contains(articleToDisplay) {
             bookmarks.remove(articleToDisplay)

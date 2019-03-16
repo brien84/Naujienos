@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SettingsProtocol: AnyObject {
+protocol SettingsDelegate: AnyObject {
     func settingsUpdated()
 }
 
@@ -22,7 +22,7 @@ struct Section {
 /// If changes were made, saves Settings model on exit and calls settingsUpdated() delegate method.
 class SettingsViewController: UITableViewController {
     
-    weak var delegate: SettingsProtocol?
+    weak var delegate: SettingsDelegate?
     
     private let settings = Settings()
     private var datasource = [Section]()

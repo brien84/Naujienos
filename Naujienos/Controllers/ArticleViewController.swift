@@ -60,7 +60,7 @@ class ArticleViewController: UITableViewController {
     }
 }
 
-extension ArticleViewController: BookmarkButtonProtocol {
+extension ArticleViewController: BookmarkButtonDelegate {
     func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer) {
         if let indexPath = self.tableView?.indexPathForRow(at: gestureRecognizer.location(in: self.tableView)) {
             

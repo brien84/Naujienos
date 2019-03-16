@@ -71,7 +71,7 @@ class MainFeedViewController: ArticleViewController {
     }
 }
 
-extension MainFeedViewController: FetcherProtocol {
+extension MainFeedViewController: FetcherDelegate {
     func finishedFetching() {
         datasource = fetcher.articles
         tableView.reloadData()
@@ -79,7 +79,7 @@ extension MainFeedViewController: FetcherProtocol {
     }
 }
 
-extension MainFeedViewController: SettingsProtocol {
+extension MainFeedViewController: SettingsDelegate {
     func settingsUpdated() {
         refreshData()
     }

@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol BookmarkButtonProtocol: AnyObject {
+protocol BookmarkButtonDelegate: AnyObject {
     func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer)
 }
 
 class BookmarkButton: UIButton {
 
-    weak var delegate: BookmarkButtonProtocol?
+    weak var delegate: BookmarkButtonDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
