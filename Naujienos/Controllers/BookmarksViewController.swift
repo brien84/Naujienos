@@ -10,6 +10,11 @@ import UIKit
 
 class BookmarksViewController: ArticleViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.title = "Žymės"
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         datasource = bookmarks.articles
