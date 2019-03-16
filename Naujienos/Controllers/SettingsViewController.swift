@@ -11,6 +11,12 @@ import UIKit
 protocol SettingsProtocol: AnyObject {
     func settingsUpdated()
 }
+
+struct Section {
+    let item: SettingsItem
+    var isCollapsed: Bool
+}
+
 /// Displays Settings model in TableView.
 /// Selecting rows switches categories bool property's value.
 /// If changes were made, saves Settings model on exit and calls settingsUpdated() delegate method.
@@ -19,14 +25,42 @@ class SettingsViewController: UITableViewController {
     weak var delegate: SettingsProtocol?
     
     private let settings = Settings()
+    private var datasource = [Section]()
+    
     private var changesMade = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        /// Adds SettingsItem to datasource array. By default all items are collapsed.
+        settings.items.forEach { datasource.append(Section(item: $0, isCollapsed: true)) }
+        
+        /// Setup NavigationController
+        navigationItem.title = "Nustatymai"
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:Constants.Colors.red,
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 20)!
+        ]
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationBar.tintColor = Constants.Colors.red
+        
+        /// Setup TableView
+        tableView.register(UINib(nibName: "SettingsSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
+        tableView.register(UINib(nibName: "SettingsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.backgroundColor = .white
+        
+        tableView.sectionHeaderHeight = Constants.TableView.Settings.sectionHeaderHeight
+        tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
+        
+        /// Add TableViewHeader
+        if let tableHeaderView = Bundle.main.loadNibNamed("SettingsTableHeaderView", owner: nil, options: nil)?.first as? UIView {
+            tableHeaderView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: tableView.sectionHeaderHeight / 3)
+            self.tableView.tableHeaderView = tableHeaderView
+        }
     }
     
+    /// If changes were made, saves Settings and calls delegate method.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if changesMade {
@@ -36,34 +70,32 @@ class SettingsViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return settings.items.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return datasource.count
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: 45))
-        let label = UILabel(frame: view.bounds)
-        label.text = settings.items[section].provider
-        view.addSubview(label)
-        return view
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "Header") as! SettingsSectionHeader
+        header.title.text = datasource[section].item.provider
+        header.icon.image = UIImage(named: datasource[section].item.provider)
+        header.setCollapsed(to: datasource[section].isCollapsed)
+        header.section = section
+        header.delegate = self
+        return header
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settings.items[section].categories.count
+        return datasource[section].isCollapsed ? 0 : datasource[section].item.categories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SettingsViewCell
         
         ///
-        let categories = settings.items[indexPath.section].categories
+        let categories = datasource[indexPath.section].item.categories
         let categoryKeys = categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
-        cell.textLabel?.text = categoryName
+        cell.title.text = categoryName
         
         ///
         if let categoryBool = categories[categoryName] {
@@ -77,7 +109,7 @@ class SettingsViewController: UITableViewController {
         changesMade = true
         
         ///
-        let item = settings.items[indexPath.section]
+        let item = datasource[indexPath.section].item
         let categoryKeys = item.categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
@@ -85,8 +117,18 @@ class SettingsViewController: UITableViewController {
             item.categories[categoryName] = !categoryBool
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
-
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 
+}
+
+extension SettingsViewController: SettingsSectionHeaderDelegate {
+    func toggleCollapse(for header: SettingsSectionHeader, at section: Int) {
+
+        let isCollapsed = !datasource[section].isCollapsed
+
+        datasource[section].isCollapsed = isCollapsed
+        header.setCollapsed(to: isCollapsed)
+
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
 }

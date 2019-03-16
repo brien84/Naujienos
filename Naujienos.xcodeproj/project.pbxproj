@@ -30,6 +30,11 @@
 		294E4C6322397C02000FA89A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6222397C02000FA89A /* BookmarksViewController.swift */; };
 		294E4C6522399725000FA89A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6422399725000FA89A /* WebViewController.swift */; };
 		294E4C672239A5C9000FA89A /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C662239A5C9000FA89A /* NetworkImageView.swift */; };
+		294E4C71223C35F1000FA89A /* SettingsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */; };
+		294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */; };
+		294E4C75223C51D8000FA89A /* SettingsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */; };
+		294E4C79223D1D4D000FA89A /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */; };
+		294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		294E4C6222397C02000FA89A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		294E4C6422399725000FA89A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		294E4C662239A5C9000FA89A /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
+		294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionHeader.swift; sourceTree = "<group>"; };
+		294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSectionHeader.xib; sourceTree = "<group>"; };
+		294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableHeaderView.xib; sourceTree = "<group>"; };
+		294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +174,7 @@
 				294E4C5522382F1C000FA89A /* ArticleViewCell.xib */,
 				294E4C5E2238533F000FA89A /* BookmarkButton.swift */,
 				294E4C662239A5C9000FA89A /* NetworkImageView.swift */,
+				294E4C76223D1CF8000FA89A /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +188,18 @@
 				294E4C442236FCAF000FA89A /* Settings.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		294E4C76223D1CF8000FA89A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */,
+				294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */,
+				294E4C74223C51D8000FA89A /* SettingsTableHeaderView.xib */,
+				294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */,
+				294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */,
+				294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */,
+				294E4C75223C51D8000FA89A /* SettingsTableHeaderView.xib in Resources */,
 				294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */,
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */,
+				294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */,
 				293CBCC322346A4900FDB81D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,12 +314,14 @@
 				294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */,
 				294E4C5B2238500F000FA89A /* Bookmarks.swift in Sources */,
 				294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */,
+				294E4C71223C35F1000FA89A /* SettingsSectionHeader.swift in Sources */,
 				294E4C6122397508000FA89A /* MainFeedViewController.swift in Sources */,
 				294E4C672239A5C9000FA89A /* NetworkImageView.swift in Sources */,
 				294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 				294E4C4B223701FF000FA89A /* Constants.swift in Sources */,
 				294E4C4D2237FF1A000FA89A /* Article.swift in Sources */,
+				294E4C79223D1D4D000FA89A /* SettingsViewCell.swift in Sources */,
 				294E4C6522399725000FA89A /* WebViewController.swift in Sources */,
 				294E4C5922383998000FA89A /* SettingsViewController.swift in Sources */,
 			);

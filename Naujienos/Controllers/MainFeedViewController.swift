@@ -23,7 +23,7 @@ class MainFeedViewController: ArticleViewController {
         refreshData()
     }
     
-    /// overrides with tableView.reloadData incase Bookmarks changed before returning to this VC
+    /// Overrides with tableView.reloadData incase Bookmarks changed before returning to this VC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -60,7 +60,7 @@ class MainFeedViewController: ArticleViewController {
     // MARK: - Navigation methods
     
     @objc private func openSettings() {
-        let vc = SettingsViewController()
+        let vc = SettingsViewController(style: .grouped)
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }

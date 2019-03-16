@@ -11,11 +11,15 @@ import UIKit
 struct Constants {
     
     struct TableView {
-        
+        struct Settings {
+            static let sectionHeaderHeight: CGFloat = 44.0
+            static let sectionFooterHeight: CGFloat = 0.0
+        }
     }
     
     struct Colors {
-        static let background = UIColor(red: 241/255, green: 242/255, blue: 246/255, alpha: 1.0) 
+        static let red = UIColor(red: 255/255, green: 71/255, blue: 87/255, alpha: 1.0) //rgb(255, 71, 87)
+        static let background = UIColor(red: 241/255, green: 242/255, blue: 246/255, alpha: 1.0)
     }
     
     struct URLs {
