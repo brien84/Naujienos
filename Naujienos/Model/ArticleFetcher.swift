@@ -38,7 +38,7 @@ class ArticleFetcher {
             }
             
             self.articles = self.articles.sorted(by: { $0.date > $1.date})
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.async {
                 self.delegate?.finishedFetching()
             }
             

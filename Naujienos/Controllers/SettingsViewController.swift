@@ -82,7 +82,7 @@ class SettingsViewController: UITableViewController {
         let categoryKeys = categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
-        cell.title.text = categoryName
+        cell.title.text = categoryName.translateToLT
         
         ///
         if let categoryBool = categories[categoryName] {
@@ -117,5 +117,30 @@ extension SettingsViewController: SettingsSectionHeaderDelegate {
         header.setCollapsed(to: isCollapsed)
 
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
+}
+
+extension String {
+    var translateToLT: String {
+        switch self {
+        case "_main":
+            return "Pagrindinės"
+        case "sport":
+            return "Sportas"
+        case "business":
+            return "Verslas"
+        case "science":
+            return "Mokslas"
+        case "auto":
+            return "Automobiliai"
+        case "lifestyle":
+            return "Gyvenimo būdas"
+        case "crime":
+            return "Nusikaltimai"
+        case "health":
+            return "Sveikata"
+        default:
+            return self
+        }
     }
 }
