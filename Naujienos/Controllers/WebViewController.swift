@@ -70,7 +70,6 @@ class WebViewController: UIViewController {
         }
         navigationController?.navigationBar.addSubview(loadingBar)
         
-        // FIXME: bookmarkButton does visibly appear in navigation bar
         /// Setup bookmark button.
         let bookmarkButton = BookmarkButton()
         bookmarkButton.delegate = self

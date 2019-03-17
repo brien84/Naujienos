@@ -32,6 +32,7 @@ class MainFeedViewController: ArticleViewController {
     
     @objc private func refreshData() {
         refreshControl?.endRefreshing()
+        refreshControl = nil
         titleView.isLoading = true
         fetcher.fetch()
     }
@@ -88,6 +89,7 @@ extension MainFeedViewController: FetcherDelegate {
         }
         tableView.reloadData()
         titleView.isLoading = false
+        setupRefreshControl()
     }
 }
 
