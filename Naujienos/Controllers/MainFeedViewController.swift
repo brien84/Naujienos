@@ -80,10 +80,10 @@ extension MainFeedViewController: FetcherDelegate {
         tableView.backgroundView = nil
         datasource = fetcher.articles
         if error != nil {
-            let label = ErrorLabel(frame: tableView.frame, error: .Network)
+            let label = ErrorLabel(frame: tableView.bounds, error: .Network)
             tableView.backgroundView = label
         } else if datasource.count == 0 {
-            let label = ErrorLabel(frame: tableView.frame, error: .EmptyDatasource)
+            let label = ErrorLabel(frame: tableView.bounds, error: .EmptyDatasource)
             tableView.backgroundView = label
         }
         tableView.reloadData()
