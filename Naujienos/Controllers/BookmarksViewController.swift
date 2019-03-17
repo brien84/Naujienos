@@ -12,11 +12,15 @@ class BookmarksViewController: ArticleViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Žymės"
+        navigationItem.title = "Išsaugoti"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         datasource = bookmarks.articles
+        if datasource.count == 0 {
+            let label = ErrorLabel(frame: self.view.bounds, error: .EmptyBookmarks)
+            self.view.addSubview(label)
+        }
     }
 }
