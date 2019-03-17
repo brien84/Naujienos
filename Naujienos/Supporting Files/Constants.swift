@@ -27,6 +27,7 @@ struct Constants {
     
     struct Fonts {
         static let navigationControllerTitle = UIFont(name: "HelveticaNeue-Light", size: 20)!
+        static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21)!
     }
     
     struct URLs {

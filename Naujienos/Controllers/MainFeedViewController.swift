@@ -76,8 +76,16 @@ class MainFeedViewController: ArticleViewController {
 }
 
 extension MainFeedViewController: FetcherDelegate {
-    func finishedFetching() {
+    func finishedFetching(with error: Error?) {
+        tableView.backgroundView = nil
         datasource = fetcher.articles
+        if error != nil {
+            let label = ErrorLabel(frame: tableView.frame, error: .Network)
+            tableView.backgroundView = label
+        } else if datasource.count == 0 {
+            let label = ErrorLabel(frame: tableView.frame, error: .EmptyDatasource)
+            tableView.backgroundView = label
+        }
         tableView.reloadData()
         titleView.isLoading = false
     }

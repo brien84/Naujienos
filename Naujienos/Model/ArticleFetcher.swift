@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FetcherDelegate: AnyObject {
-    func finishedFetching()
+    func finishedFetching(with error: Error?)
 }
 
 class ArticleFetcher {
@@ -20,12 +20,19 @@ class ArticleFetcher {
     
     /// Sends request to the API. If request is succesful, response data is decoded to array of Article and sorted by most recent.
     func fetch() {
-        
+    //func fetch() {
         articles.removeAll()
         
         guard let request = prepareRequest() else { return }
         
         URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.delegate?.finishedFetching(with: error)
+                }
+            }
+        
             guard let data = data else { return }
             
             let decoder = JSONDecoder()
@@ -39,7 +46,7 @@ class ArticleFetcher {
             
             self.articles = self.articles.sorted(by: { $0.date > $1.date})
             DispatchQueue.main.async {
-                self.delegate?.finishedFetching()
+                self.delegate?.finishedFetching(with: nil)
             }
             
         }.resume()
