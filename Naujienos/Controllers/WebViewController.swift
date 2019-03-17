@@ -85,6 +85,12 @@ extension WebViewController: WKNavigationDelegate {
         loadingBar.isHidden = true
     }
     
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        let label = ErrorLabel(frame: self.view.frame, error: .WebViewError)
+        webView.addSubview(label)
+        loadingBar.isHidden = true
+    }
+    
     /// Opens link tapped inside WebView in a Safari browser.
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if navigationAction.navigationType == .linkActivated {
