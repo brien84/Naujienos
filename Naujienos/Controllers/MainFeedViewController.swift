@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+/// Acts as a root ViewController.
+/// Fetches Articles with ArticleFetcher, then displays them in TableView.
+/// Handles navigation to SettingsViewController and BookmarksViewController.
 class MainFeedViewController: ArticleViewController {
     
     let fetcher = ArticleFetcher()
@@ -22,18 +24,23 @@ class MainFeedViewController: ArticleViewController {
 
         fetcher.delegate = self
         
-        refreshData()
+        fetchData()
     }
     
-    ///
     override func viewWillAppear(_ animated: Bool) {
+        /// bookmarks property is set in superclass, everytime app returns to this ViewController.
         super.viewWillAppear(animated)
+        /// Reloads data, since bookmarks might have been updated.
         tableView.reloadData()
     }
     
-    @objc private func refreshData() {
+    @objc private func fetchData() {
+        /// Immediately stops refreshControl animation and disables refreshControl
+        /// to prevent it from being called again, while fetching is in progress.
+        /// refreshControl will be re-setup after fetching has finished.
         refreshControl?.endRefreshing()
         refreshControl = nil
+        
         titleView.isLoading = true
         fetcher.fetch()
     }
@@ -60,7 +67,7 @@ class MainFeedViewController: ArticleViewController {
         let refreshTitle = NSAttributedString(string: "Atnaujinti",
                                               attributes: [NSAttributedString.Key.foregroundColor:Constants.Colors.red])
         refreshControl?.attributedTitle = refreshTitle
-        refreshControl?.addTarget(self, action: #selector(refreshData), for: UIControl.Event.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(fetchData), for: UIControl.Event.valueChanged)
     }
     
     // MARK: - Navigation methods
@@ -79,8 +86,11 @@ class MainFeedViewController: ArticleViewController {
 
 extension MainFeedViewController: FetcherDelegate {
     func finishedFetching(with error: Error?) {
+        /// Sets backgroundView to nil to remove previous error label.
         tableView.backgroundView = nil
         datasource = fetcher.articles
+        
+        /// If ArticleFetcher returns error or if datasource is empty, displays respective error.
         if error != nil {
             let label = ErrorLabel(frame: tableView.bounds, error: .Network)
             tableView.backgroundView = label
@@ -88,14 +98,16 @@ extension MainFeedViewController: FetcherDelegate {
             let label = ErrorLabel(frame: tableView.bounds, error: .EmptyDatasource)
             tableView.backgroundView = label
         }
+        
         tableView.reloadData()
         titleView.isLoading = false
+        /// Re-setups refreshControl after fetching is finished.
         setupRefreshControl()
     }
 }
 
 extension MainFeedViewController: SettingsDelegate {
     func settingsUpdated() {
-        refreshData()
+        fetchData()
     }
 }

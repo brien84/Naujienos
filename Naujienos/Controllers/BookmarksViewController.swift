@@ -17,7 +17,7 @@ class BookmarksViewController: ArticleViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        /// Datasource is set, after bookmarks are loaded in superclass.
+        /// datasource is set, after bookmarks are loaded in superclass.
         datasource = bookmarks.articles
         
         /// If datasource is empty, displays an error.

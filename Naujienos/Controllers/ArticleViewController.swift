@@ -23,8 +23,8 @@ class ArticleViewController: UITableViewController {
         tableView.separatorStyle = .none
     }
     
-    /// Bookmarks property is set in viewWillAppear,
-    /// so it could conveniently be updated on return to Root View Controller.
+    /// bookmarks property is set in viewWillAppear,
+    /// so it could conveniently be updated on return to root ViewController.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bookmarks = Bookmarks()
