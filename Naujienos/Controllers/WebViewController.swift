@@ -50,7 +50,7 @@ class WebViewController: UIViewController {
     // MARK: - Setup methods
     
     private func setupWebView() {
-        webView = WKWebView()
+        webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
         webView.navigationDelegate = self
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         webView.allowsBackForwardNavigationGestures = true
