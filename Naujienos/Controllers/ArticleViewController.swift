@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Displays an array of Article in TableView.
 class ArticleViewController: UITableViewController {
     
     var datasource = [Article]()
@@ -17,12 +18,13 @@ class ArticleViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
-        
         tableView.backgroundColor = Constants.Colors.backgroundGray
+        tableView.estimatedRowHeight = Constants.TableView.Article.estimatedRowHeight
         tableView.separatorStyle = .none
-        tableView.estimatedRowHeight = 600.0
     }
     
+    /// Bookmarks property is set in viewWillAppear,
+    /// so it could conveniently be updated on return to Root View Controller.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bookmarks = Bookmarks()
@@ -41,14 +43,12 @@ class ArticleViewController: UITableViewController {
     
         let item = datasource[indexPath.row]
         
-        cell.bookmarkButton.isSelected = bookmarks.contains(item)
-        
-        cell.articleImage.url = item.imageURL
-        cell.providerIcon.image = UIImage(named: item.provider)
-        
         cell.title.text = item.title
         cell.timeSincePublished.text = item.timeSincePublished
         cell.articleDescription.text = item.description
+        cell.articleImage.url = item.imageURL
+        cell.providerIcon.image = UIImage(named: item.provider)
+        cell.bookmarkButton.isSelected = bookmarks.contains(item)
         
         return cell
     }
@@ -61,6 +61,7 @@ class ArticleViewController: UITableViewController {
 }
 
 extension ArticleViewController: BookmarkButtonDelegate {
+    /// When BookmarkButton is tapped, Article is added to/removed from bookmarks.
     func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer) {
         if let indexPath = self.tableView?.indexPathForRow(at: gestureRecognizer.location(in: self.tableView)) {
             

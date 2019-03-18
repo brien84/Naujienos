@@ -10,13 +10,6 @@ import UIKit
 
 struct Constants {
     
-    struct TableView {
-        struct Settings {
-            static let sectionHeaderHeight: CGFloat = 44.0
-            static let sectionFooterHeight: CGFloat = 0.0
-        }
-    }
-    
     struct Colors {
         static let red = UIColor(red: 255/255, green: 71/255, blue: 87/255, alpha: 1.0)                 //#ff4757
         static let dark = UIColor(red: 47/255, green: 53/255, blue: 66/255, alpha: 1.0)                 //#2f3542
@@ -30,11 +23,26 @@ struct Constants {
         static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21)!
     }
     
+    struct NavigationController {
+        struct Bookmarks {
+            static let title = "Išsaugoti"
+        }
+    }
+    
+    struct TableView {
+        struct Article {
+            static let estimatedRowHeight: CGFloat = 600.0
+        }
+        
+        struct Settings {
+            static let sectionHeaderHeight: CGFloat = 44.0
+            static let sectionFooterHeight: CGFloat = 0.0
+        }
+    }
+    
     struct URLs {
         static let server: URL? = URL(string: "http://142.93.60.232:8080/filter")
-        
         static let settings: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Settings.plist")
         static let bookmarks: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Bookmarks.plist")
     }
-    
 }

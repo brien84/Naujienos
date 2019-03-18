@@ -85,6 +85,7 @@ extension WebViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print(error)
         let label = ErrorLabel(frame: self.view.bounds, error: .WebViewError)
         webView.addSubview(label)
         loadingBar.isHidden = true
