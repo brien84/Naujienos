@@ -16,7 +16,6 @@ struct Article: Codable {
     let description: String
     let imageURL: URL
     let provider: String
-    let category: String
     
     var timeSincePublished: String {
         return date.timeSincePublished
