@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCBD22346A4900FDB81D /* AppDelegate.swift */; };
-		293CBCC322346A4900FDB81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC122346A4900FDB81D /* Main.storyboard */; };
 		293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC422346A4A00FDB81D /* Assets.xcassets */; };
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
 		293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCD222346A4A00FDB81D /* NaujienosTests.swift */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		293CBCBA22346A4900FDB81D /* Naujienos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naujienos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293CBCBD22346A4900FDB81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		293CBCC222346A4900FDB81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		293CBCC422346A4A00FDB81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293CBCC722346A4A00FDB81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293CBCC922346A4A00FDB81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				293CBCC422346A4A00FDB81D /* Assets.xcassets */,
 				293CBCC922346A4A00FDB81D /* Info.plist */,
 				293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */,
-				293CBCC122346A4900FDB81D /* Main.storyboard */,
 			);
 			path = Naujienos;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */,
 				294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */,
-				293CBCC322346A4900FDB81D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		293CBCC122346A4900FDB81D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				293CBCC222346A4900FDB81D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

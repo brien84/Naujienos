@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MainFeedViewController: ArticleViewController {
     
     let fetcher = ArticleFetcher()
@@ -24,7 +25,7 @@ class MainFeedViewController: ArticleViewController {
         refreshData()
     }
     
-    /// Overrides with tableView.reloadData incase Bookmarks changed before returning to this VC
+    ///
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
