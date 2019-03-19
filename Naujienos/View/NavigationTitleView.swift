@@ -8,6 +8,10 @@
 
 import UIKit
 
+/// Custom navigationItem titleView.
+/// Frame and indicator scale are hard coded to fit in Navigation bar.
+/// When isLoading set to true, view displays spinning activity indicator.
+/// When isLoading set to false, view displays app icon.
 class NavigationTitleView: UIView {
     
     var isLoading = false {

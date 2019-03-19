@@ -169,13 +169,11 @@
 		294E4C402236E8C1000FA89A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				294E4C5422382F1C000FA89A /* ArticleViewCell.swift */,
-				294E4C5522382F1C000FA89A /* ArticleViewCell.xib */,
 				294E4C5E2238533F000FA89A /* BookmarkButton.swift */,
 				294E4C7F223ED809000FA89A /* ErrorLabel.swift */,
 				294E4C7D223D802F000FA89A /* NavigationTitleView.swift */,
 				294E4C662239A5C9000FA89A /* NetworkImageView.swift */,
-				294E4C76223D1CF8000FA89A /* Settings */,
+				294E4C76223D1CF8000FA89A /* TableView Cells and Headers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,15 +189,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		294E4C76223D1CF8000FA89A /* Settings */ = {
+		294E4C76223D1CF8000FA89A /* TableView Cells and Headers */ = {
 			isa = PBXGroup;
 			children = (
+				294E4C5422382F1C000FA89A /* ArticleViewCell.swift */,
+				294E4C5522382F1C000FA89A /* ArticleViewCell.xib */,
 				294E4C70223C35F1000FA89A /* SettingsSectionHeader.swift */,
 				294E4C72223C44CD000FA89A /* SettingsSectionHeader.xib */,
 				294E4C77223D1D4D000FA89A /* SettingsViewCell.swift */,
 				294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */,
 			);
-			path = Settings;
+			path = "TableView Cells and Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

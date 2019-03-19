@@ -8,6 +8,11 @@
 
 import UIKit
 
+/// Class for downloading and displaying images.
+/// When url property is set, first checks if image is cached, then either
+/// displays image from cache or downloads image.
+///
+/// - Note: Images are cached as Data to significantly lower memory usage.
 class NetworkImageView: UIImageView {
 
     private let cache = NSCache<NSString, NSData>()
@@ -20,6 +25,7 @@ class NetworkImageView: UIImageView {
         }
     }
     
+    /// If image is nil, displays spinning activityIndicator.
     override var image: UIImage? {
         didSet {
             if image != nil {
@@ -30,23 +36,25 @@ class NetworkImageView: UIImageView {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        activityIndicator.center = self.center
-    }
-    
     override func awakeFromNib() {
+        /// Setup activityIndicator.
         activityIndicator.color = Constants.Colors.red
         activityIndicator.startAnimating()
         addSubview(activityIndicator)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        activityIndicator.center = self.center
+    }
+
     private func loadImage() {
         guard let url = url else {
             self.image = nil
             return
         }
         
+        /// If image data is found in cache.
         if let cachedData = cache.object(forKey: url.absoluteString as NSString) {
             guard let image = UIImage(data: cachedData as Data) else { return }
             self.image = image
@@ -61,5 +69,4 @@ class NetworkImageView: UIImageView {
             }.resume()
         }
     }
-
 }

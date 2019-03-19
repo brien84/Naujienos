@@ -13,11 +13,8 @@ class ArticleViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var timeSincePublished: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
-
-    @IBOutlet weak var articleImage: NetworkImageView!
-    
     @IBOutlet weak var providerIcon: UIImageView!
-    
+    @IBOutlet weak var articleImage: NetworkImageView!
     @IBOutlet weak var bookmarkButton: BookmarkButton!
     
     override func awakeFromNib() {

@@ -27,7 +27,6 @@ class BookmarkButton: UIButton {
     }
     
     private func setupButton() {
-        
         self.setImage(UIImage(named: "bookmarkOff"), for: .normal)
         self.setImage(UIImage(named: "bookmarkOn"), for: .selected)
         
@@ -37,5 +36,4 @@ class BookmarkButton: UIButton {
     @objc private func buttonTapped(_ gestureRecognizer: UITapGestureRecognizer) {
         delegate?.bookmarkButtonTapped(self, gestureRecognizer)
     }
-
 }
