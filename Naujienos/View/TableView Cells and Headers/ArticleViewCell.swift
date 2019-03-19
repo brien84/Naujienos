@@ -25,4 +25,14 @@ class ArticleViewCell: UITableViewCell {
         self.articleImage.image = nil
         self.bookmarkButton.isSelected = false
     }
+    
+    /// Resize Font sizes according to Accessibility settings.
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        let pointSize = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .title1).pointSize
+        title.font = Constants.Fonts.articleViewCellTitle.resizeFontAccording(to: pointSize)
+        timeSincePublished.font = Constants.Fonts.articleViewCelltimeSincePublished.resizeFontAccording(to: pointSize)
+        articleDescription.font = Constants.Fonts.articleViewCellDescription.resizeFontAccording(to: pointSize)
+    }
 }

@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension UIFont {
+    func resizeFontAccording(to pointSize: CGFloat) -> UIFont {
+        /// 28.0 is default preferred pointSize
+        let multiplier = pointSize / 28.0
+        let newPointSize = self.pointSize * multiplier
+        return self.withSize(newPointSize)
+    }
+}
+
 struct Constants {
     
     struct Colors {
@@ -19,8 +28,16 @@ struct Constants {
     }
     
     struct Fonts {
-        static let navigationControllerTitle = UIFont(name: "HelveticaNeue-Light", size: 20)!
-        static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21)!
+        static let articleViewCellTitle = UIFont(name: "HelveticaNeue-Medium", size: 25.0)!
+        static let articleViewCellDescription = UIFont(name: "HelveticaNeue-Light", size: 16.0)!
+        static let articleViewCelltimeSincePublished = UIFont(name: "HelveticaNeue-Light", size: 14.0)!
+        
+        static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
+        
+        static let navigationControllerTitle = UIFont(name: "HelveticaNeue-Light", size: 20.0)!
+
+        static let settingsViewHeaderTitle = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
+        static let settingsViewCellTitle = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
     }
     
     struct NavigationControllerTitles {

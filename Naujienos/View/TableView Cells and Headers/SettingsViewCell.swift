@@ -17,4 +17,12 @@ class SettingsViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.tintColor = Constants.Colors.red
     }
+    
+    /// Resize Font sizes according to Accessibility settings.
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        let pointSize = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .title1).pointSize
+        title.font = Constants.Fonts.settingsViewCellTitle.resizeFontAccording(to: pointSize)
+    }
 }

@@ -34,4 +34,12 @@ class SettingsSectionHeader: UITableViewHeaderFooterView {
     func setCollapsionIndicator(to isCollapsed: Bool) {
         collapsionIndicator.image = isCollapsed ? UIImage(named: "sectionCollapsed") : UIImage(named: "sectionExpanded")
     }
+    
+    /// Resize Font sizes according to Accessibility settings.
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        let pointSize = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .title1).pointSize
+        title.font = Constants.Fonts.settingsViewHeaderTitle.resizeFontAccording(to: pointSize)
+    }
 }
