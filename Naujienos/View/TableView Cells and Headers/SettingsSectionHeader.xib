@@ -26,27 +26,27 @@
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sectionCollapsed" translatesAutoresizingMaskIntoConstraints="NO" id="LRO-7s-wuX">
-                            <rect key="frame" x="342" y="12" width="20" height="20"/>
+                            <rect key="frame" x="343" y="16" width="12" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="LRO-7s-wuX" secondAttribute="height" multiplier="1:1" id="qsv-ur-AKA"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epP-gG-lEp">
-                            <rect key="frame" x="44" y="11.5" width="44.5" height="21"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <rect key="frame" x="44" y="11" width="46.5" height="22.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                             <color key="textColor" red="0.18431372549019609" green="0.20784313725490194" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="LRO-7s-wuX" secondAttribute="trailing" constant="13" id="64x-wy-7kr"/>
+                        <constraint firstAttribute="trailing" secondItem="LRO-7s-wuX" secondAttribute="trailing" constant="20" symbolic="YES" id="64x-wy-7kr"/>
                         <constraint firstItem="bwD-HN-Epc" firstAttribute="leading" secondItem="AsD-NV-Zf9" secondAttribute="leading" constant="8" id="8hC-mH-eti"/>
-                        <constraint firstAttribute="bottom" secondItem="LRO-7s-wuX" secondAttribute="bottom" priority="999" constant="12" id="Jo8-KB-QQW"/>
+                        <constraint firstAttribute="bottom" secondItem="LRO-7s-wuX" secondAttribute="bottom" priority="999" constant="16" id="Jo8-KB-QQW"/>
                         <constraint firstAttribute="bottom" secondItem="bwD-HN-Epc" secondAttribute="bottom" priority="999" constant="8" id="ajl-IX-Yb6"/>
                         <constraint firstItem="epP-gG-lEp" firstAttribute="leading" secondItem="bwD-HN-Epc" secondAttribute="trailing" constant="8" id="c3M-bt-quT"/>
                         <constraint firstItem="bwD-HN-Epc" firstAttribute="top" secondItem="AsD-NV-Zf9" secondAttribute="top" constant="8" id="luL-Ik-aZ4"/>
-                        <constraint firstItem="LRO-7s-wuX" firstAttribute="top" secondItem="AsD-NV-Zf9" secondAttribute="top" constant="12" id="oCj-RX-551"/>
+                        <constraint firstItem="LRO-7s-wuX" firstAttribute="top" secondItem="AsD-NV-Zf9" secondAttribute="top" constant="16" id="oCj-RX-551"/>
                         <constraint firstItem="epP-gG-lEp" firstAttribute="centerY" secondItem="AsD-NV-Zf9" secondAttribute="centerY" id="rwo-4p-Oc8"/>
                     </constraints>
                 </view>

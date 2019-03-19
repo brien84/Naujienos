@@ -34,8 +34,9 @@ struct Constants {
         }
         
         struct Settings {
-            static let sectionHeaderHeight: CGFloat = 44.0
+            static let sectionHeaderHeight: CGFloat = 50.0
             static let sectionFooterHeight: CGFloat = 0.0
+            static let rowHeight: CGFloat = 50.0
         }
     }
     

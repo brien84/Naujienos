@@ -47,7 +47,7 @@
                             <constraint firstItem="Ysl-6T-1cH" firstAttribute="centerY" secondItem="gQT-6Y-Umv" secondAttribute="centerY" id="0OI-Sv-zCq"/>
                             <constraint firstItem="tTF-vO-8u2" firstAttribute="centerY" secondItem="gQT-6Y-Umv" secondAttribute="centerY" id="0Sa-YY-HTV"/>
                             <constraint firstAttribute="trailing" secondItem="tTF-vO-8u2" secondAttribute="trailing" constant="8" id="5NO-pv-Zd2"/>
-                            <constraint firstAttribute="height" constant="50" id="Hfj-UV-dYa"/>
+                            <constraint firstAttribute="width" secondItem="gQT-6Y-Umv" secondAttribute="height" multiplier="15:2" id="Du0-nB-fcf"/>
                             <constraint firstItem="tTF-vO-8u2" firstAttribute="top" secondItem="gQT-6Y-Umv" secondAttribute="top" constant="8" id="Oyc-KH-MGZ"/>
                             <constraint firstItem="3wo-bq-ezj" firstAttribute="leading" secondItem="Ysl-6T-1cH" secondAttribute="trailing" constant="8" id="TBU-WF-ERv"/>
                             <constraint firstAttribute="bottom" secondItem="Ysl-6T-1cH" secondAttribute="bottom" constant="8" id="Uyu-sp-5Ax"/>
@@ -67,15 +67,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-9v-a8J" userLabel="Description">
-                                <rect key="frame" x="16" y="400.5" width="343" height="52.5"/>
+                                <rect key="frame" x="16" y="406" width="343" height="56"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="0.3411764705882353" green="0.37647058823529411" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jr-KX-89Z" userLabel="Title">
-                                <rect key="frame" x="16" y="241" width="343" height="143.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <rect key="frame" x="16" y="241" width="343" height="149"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.18431372549019609" green="0.20784313725490194" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

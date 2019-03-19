@@ -49,6 +49,7 @@ class SettingsViewController: UITableViewController {
         tableView.backgroundColor = Constants.Colors.backgroundWhite
         tableView.sectionHeaderHeight = Constants.TableView.Settings.sectionHeaderHeight
         tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
+        tableView.rowHeight = Constants.TableView.Settings.rowHeight
     }
     
     override func viewWillDisappear(_ animated: Bool) {

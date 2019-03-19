@@ -124,4 +124,3 @@ extension WebViewController: BookmarkButtonDelegate {
         sender.isSelected = !sender.isSelected
     }
 }
-
