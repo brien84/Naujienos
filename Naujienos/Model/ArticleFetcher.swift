@@ -8,7 +8,7 @@
 
 import Foundation
 
-private enum FetchingErrors: Error {
+private enum FetchingError: Error {
     case prepareRequest
     case urlSession
 }
@@ -32,18 +32,18 @@ class ArticleFetcher {
     /// If request is succesful, response data is decoded to array of Article, sorted by most recent.
     /// Then delegate method is called with the array passed as an argument.
     ///
-    /// If function failed to get data, delegate method is called with an empty Array of Article and an Error.
+    /// If function failed to get data, delegate method is called with an empty articles array and an FetchingError.
     func fetch() {
         var articles = [Article]()
         
         guard let request = prepareRequest() else {
-            self.dispatchDelegate(articles, with: FetchingErrors.prepareRequest)
+            self.dispatchDelegate(articles, with: FetchingError.prepareRequest)
             return
         }
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                self.dispatchDelegate(articles, with: FetchingErrors.urlSession)
+                self.dispatchDelegate(articles, with: FetchingError.urlSession)
                 return
             }
             
