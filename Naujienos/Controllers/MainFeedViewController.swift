@@ -85,10 +85,11 @@ class MainFeedViewController: ArticleViewController {
 }
 
 extension MainFeedViewController: FetcherDelegate {
-    func finishedFetching(with error: Error?) {
+    func finishedFetching(_ articles: [Article], with error: Error?) {
+        datasource = articles
+        
         /// Sets backgroundView to nil to remove previous error label.
         tableView.backgroundView = nil
-        datasource = fetcher.articles
         
         /// If ArticleFetcher returns error or if datasource is empty, displays respective error.
         if error != nil {

@@ -8,62 +8,69 @@
 
 import Foundation
 
+private enum FetchingErrors: Error {
+    case prepareRequest
+    case urlSession
+}
+
 protocol FetcherDelegate: AnyObject {
-    func finishedFetching(with error: Error?)
+    func finishedFetching(_ articles: [Article], with error: Error?)
 }
 
 class ArticleFetcher {
     
     weak var delegate: FetcherDelegate?
 
-    var articles = [Article]()
+    private func dispatchDelegate(_ articles: [Article], with error: Error?) {
+        DispatchQueue.main.async {
+            self.delegate?.finishedFetching(articles, with: error)
+        }
+    }
     
-    /// Sends request to the API. If request is succesful, response data is decoded to array of Article and sorted by most recent.
+    /// Sends request to the API.
+    ///
+    /// If request is succesful, response data is decoded to array of Article, sorted by most recent.
+    /// Then delegate method is called with the array passed as an argument.
+    ///
+    /// If function failed to get data, delegate method is called with an empty Array of Article and an Error.
     func fetch() {
-    //func fetch() {
-        articles.removeAll()
+        var articles = [Article]()
         
-        guard let request = prepareRequest() else { return }
+        guard let request = prepareRequest() else {
+            self.dispatchDelegate(articles, with: FetchingErrors.prepareRequest)
+            return
+        }
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let error = error {
-                DispatchQueue.main.async {
-                    self.delegate?.finishedFetching(with: error)
-                }
+            guard let data = data else {
+                self.dispatchDelegate(articles, with: FetchingErrors.urlSession)
+                return
             }
-        
-            guard let data = data else { return }
             
             let decoder = JSONDecoder()
+            /// Decoded dates with .iso8601 look like this: "2018-12-25T17:30:00Z".
             decoder.dateDecodingStrategy = .iso8601
             
             do {
-                self.articles = try decoder.decode([Article].self, from: data)
+                articles = try decoder.decode([Article].self, from: data)
             } catch {
                 print("Error decoding articles, \(error)")
             }
             
-            self.articles = self.articles.sorted(by: { $0.date > $1.date})
-            DispatchQueue.main.async {
-                self.delegate?.finishedFetching(with: nil)
-            }
-            
+            articles = articles.sorted(by: { $0.date > $1.date})
+            self.dispatchDelegate(articles, with: nil)
         }.resume()
     }
     
-    /**
-     Loads Settings items and encodes them to JSON. Then creates an URLRequest with the JSON in URLRequest's body.
-    
-     - Note: The JSON data is used for querying the API. API will only return articles under categories, which are marked as true.
-     
-     This is an example of the JSON:
-     
-     [{"categories":{"_main":true,"business":false},"provider":"delfi"},{"categories":{"_main":true,"business":false},"provider":"15min"}]
-    
-     - Returns: URLRequest or nil if conversion to JSON fails.
-  
-     */
+    /// Loads Settings items and encodes them to JSON. Then creates an URLRequest with the JSON in URLRequest's body.
+    ///
+    /// - Note: The JSON data is used for querying the API. API will only return articles under categories, which are marked as true.
+    ///
+    /// This is an example of the JSON:
+    ///
+    /// [{"categories":{"_main":true,"business":false},"provider":"delfi"},{"categories":{"_main":true,"business":false},"provider":"15min"}]
+    ///
+    /// - Returns: URLRequest or nil if conversion to JSON fails.
     private func prepareRequest() -> URLRequest? {
         do {
             let settings = Settings()
@@ -82,5 +89,4 @@ class ArticleFetcher {
             return nil
         }
     }
-    
 }
