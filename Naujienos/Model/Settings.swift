@@ -13,12 +13,17 @@ class SettingsItem: Codable {
     var categories: [String: Bool]
 }
 
+/// When Settings instance is created, it decodes Settings.plist to array of SettingsItems.
+/// Settings encode items array back to Settings.plist, when the save() method is called.
+///
+/// - Note: Settings.plist default values are created using DefaultSettings.plist,
+/// when application is launched for the first time (check AppDelegate).
+/// DefaultSettings.plist can be found in app bundle.
 struct Settings {
     
     var items = [SettingsItem]()
     
-    /// Decodes SettingsItems from Settings file to items array.
-    /// Is called on init!
+    /// Called on init!
     private mutating func load() {
         guard let filePath = Constants.URLs.settings else { return }
         if let data = try? Data(contentsOf: filePath) {
@@ -31,7 +36,6 @@ struct Settings {
         }
     }
     
-    /// Encodes items array and writes to Settings file.
     func save() {
         guard let filePath = Constants.URLs.settings else { return }
         let encoder = PropertyListEncoder()
