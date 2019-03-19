@@ -31,7 +31,7 @@ class SettingsSectionHeader: UITableViewHeaderFooterView {
         delegate?.toggleCollapse(for: self, at: section)
     }
     
-    func setCollapsed(to isCollapsed: Bool) {
+    func setCollapsionIndicator(to isCollapsed: Bool) {
         collapsionIndicator.image = isCollapsed ? UIImage(named: "sectionCollapsed") : UIImage(named: "sectionExpanded")
     }
 }

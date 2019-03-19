@@ -8,18 +8,24 @@
 
 import UIKit
 
-protocol SettingsDelegate: AnyObject {
-    func settingsUpdated()
-}
-
+/// Stores reference to SettingsItem and keeps track of it's view state.
 struct Section {
     let item: SettingsItem
     var isCollapsed: Bool
 }
 
-/// Displays Settings model in TableView.
-/// Selecting rows switches categories bool property's value.
+protocol SettingsDelegate: AnyObject {
+    func settingsUpdated()
+}
+
+/// Loads Settings instance, maps SettingsItems to datasource array of Section,
+/// then displays datasource in TableView.
+/// Selecting rows switches SettingsItem categories bool property's value.
 /// If changes were made, saves Settings model on exit and calls settingsUpdated() delegate method.
+///
+/// - Note: Since Section's item property contains reference to SettingsItem (class) objects,
+/// we can safely work with datasource array in TableView
+/// and only use Settings instance for loading and saving SettingsItems.
 class SettingsViewController: UITableViewController {
     
     weak var delegate: SettingsDelegate?
@@ -45,7 +51,6 @@ class SettingsViewController: UITableViewController {
         tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
     }
     
-    /// If changes were made, saves Settings and calls delegate method.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if changesMade {
@@ -60,9 +65,10 @@ class SettingsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "Header") as! SettingsSectionHeader
+        
         header.title.text = datasource[section].item.provider
         header.icon.image = UIImage(named: datasource[section].item.provider)
-        header.setCollapsed(to: datasource[section].isCollapsed)
+        header.setCollapsionIndicator(to: datasource[section].isCollapsed)
         header.section = section
         header.delegate = self
         return header
@@ -75,16 +81,14 @@ class SettingsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SettingsViewCell
         
-        ///
-        let categories = datasource[indexPath.section].item.categories
-        let categoryKeys = categories.keys.sorted()
+        let item = datasource[indexPath.section].item
+        let categoryKeys = item.categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
         cell.title.text = categoryName.translateToLT
         
-        ///
-        if let categoryBool = categories[categoryName] {
-            cell.accessoryType = categoryBool ? .checkmark : .none
+        if let isCategorySelected = item.categories[categoryName] {
+            cell.accessoryType = isCategorySelected ? .checkmark : .none
         }
         
         return cell
@@ -92,27 +96,24 @@ class SettingsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         changesMade = true
-        
-        ///
+
         let item = datasource[indexPath.section].item
         let categoryKeys = item.categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
-        if let categoryBool = item.categories[categoryName] {
-            item.categories[categoryName] = !categoryBool
+        if let isCategorySelected = item.categories[categoryName] {
+            item.categories[categoryName] = !isCategorySelected
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
-
 }
 
 extension SettingsViewController: SettingsSectionHeaderDelegate {
     func toggleCollapse(for header: SettingsSectionHeader, at section: Int) {
 
         let isCollapsed = !datasource[section].isCollapsed
-
         datasource[section].isCollapsed = isCollapsed
-        header.setCollapsed(to: isCollapsed)
+        header.setCollapsionIndicator(to: isCollapsed)
 
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
     }
