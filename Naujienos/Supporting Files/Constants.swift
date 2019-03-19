@@ -23,10 +23,9 @@ struct Constants {
         static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21)!
     }
     
-    struct NavigationController {
-        struct Bookmarks {
-            static let title = "Išsaugoti"
-        }
+    struct NavigationControllerTitles {
+        static let bookmarks = "Išsaugoti"
+        static let settings = "Rubrikos"
     }
     
     struct TableView {

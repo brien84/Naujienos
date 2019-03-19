@@ -12,7 +12,7 @@ class BookmarksViewController: ArticleViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Constants.NavigationController.Bookmarks.title
+        navigationItem.title = Constants.NavigationControllerTitles.bookmarks
     }
 
     override func viewWillAppear(_ animated: Bool) {

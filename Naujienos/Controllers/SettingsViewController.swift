@@ -32,19 +32,17 @@ class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = Constants.NavigationControllerTitles.settings
+        
         /// Adds SettingsItem to datasource array. By default all items are collapsed.
         settings.items.forEach { datasource.append(Section(item: $0, isCollapsed: true)) }
-        
-        navigationItem.title = "Rubrikos"
         
         /// Setup TableView.
         tableView.register(UINib(nibName: "SettingsSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
         tableView.register(UINib(nibName: "SettingsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.backgroundColor = Constants.Colors.backgroundWhite
-        
         tableView.sectionHeaderHeight = Constants.TableView.Settings.sectionHeaderHeight
         tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
-        
     }
     
     /// If changes were made, saves Settings and calls delegate method.
