@@ -6,10 +6,10 @@
 //  Copyright © 2019 Marius. All rights reserved.
 //
 
-import UIKit
 import SafariServices
 import WebKit
 
+/// Opens articleToDisplay's url in WebView.
 class WebViewController: UIViewController {
 
     var articleToDisplay: Article!
@@ -32,7 +32,10 @@ class WebViewController: UIViewController {
         
         setupNavigationController()
         
-        guard let url = articleToDisplay?.url else { return }
+        guard let url = articleToDisplay?.url else {
+            displayWebViewError()
+            return
+        }
         openArticle(with: url)
     }
     
@@ -47,6 +50,12 @@ class WebViewController: UIViewController {
         }
     }
     
+    private func displayWebViewError() {
+        let label = ErrorLabel(frame: self.view.bounds, error: .WebViewError)
+        webView.addSubview(label)
+        loadingBar.isHidden = true
+    }
+    
     // MARK: - Setup methods
     
     private func setupWebView() {
@@ -58,9 +67,9 @@ class WebViewController: UIViewController {
     }
     
     private func setupNavigationController() {
-        /// Setup loading bar.
         navigationItem.title = articleToDisplay.provider
         
+        /// Setup loading bar.
         loadingBar = UIProgressView(progressViewStyle: .default)
         if let navigationBarBounds = self.navigationController?.navigationBar.bounds {
             /// Sets loading bar position to the bottom of navigation bar.
@@ -70,7 +79,7 @@ class WebViewController: UIViewController {
         }
         navigationController?.navigationBar.addSubview(loadingBar)
         
-        /// Setup bookmark button.
+        /// Setup Bookmark button.
         let bookmarkButton = BookmarkButton()
         bookmarkButton.delegate = self
         bookmarkButton.isSelected = bookmarks.contains(articleToDisplay)
@@ -79,16 +88,13 @@ class WebViewController: UIViewController {
 }
 
 extension WebViewController: WKNavigationDelegate {
-    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingBar.isHidden = true
     }
     
+    /// If webView failed to load an article, displays an error.
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print(error)
-        let label = ErrorLabel(frame: self.view.bounds, error: .WebViewError)
-        webView.addSubview(label)
-        loadingBar.isHidden = true
+        displayWebViewError()
     }
     
     /// Opens link tapped inside WebView in a Safari browser.
@@ -108,6 +114,7 @@ extension WebViewController: WKNavigationDelegate {
 }
 
 extension WebViewController: BookmarkButtonDelegate {
+    /// When BookmarkButton is tapped, Article is added to/removed from bookmarks.
     func bookmarkButtonTapped(_ sender: BookmarkButton, _ gestureRecognizer: UITapGestureRecognizer) {
         if bookmarks.contains(articleToDisplay) {
             bookmarks.remove(articleToDisplay)
