@@ -28,16 +28,16 @@ struct Constants {
     }
     
     struct Fonts {
-        static let articleViewCellTitle = UIFont(name: "HelveticaNeue-Medium", size: 25.0)!
+        static let articleViewCellTitle = UIFont(name: "HelveticaNeue-Medium", size: 26.0)!
         static let articleViewCellDescription = UIFont(name: "HelveticaNeue-Light", size: 16.0)!
-        static let articleViewCelltimeSincePublished = UIFont(name: "HelveticaNeue-Light", size: 14.0)!
+        static let articleViewCelltimeSincePublished = UIFont(name: "HelveticaNeue-Light", size: 15.0)!
         
         static let errorLabel = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
         
         static let navigationControllerTitle = UIFont(name: "HelveticaNeue-Light", size: 20.0)!
 
-        static let settingsViewHeaderTitle = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
-        static let settingsViewCellTitle = UIFont(name: "HelveticaNeue-Light", size: 21.0)!
+        static let settingsViewHeaderTitle = UIFont(name: "HelveticaNeue-Light", size: 19.0)!
+        static let settingsViewCellTitle = UIFont(name: "HelveticaNeue-Light", size: 18.0)!
     }
     
     struct NavigationControllerTitles {
@@ -51,9 +51,9 @@ struct Constants {
         }
         
         struct Settings {
-            static let sectionHeaderHeight: CGFloat = 50.0
+            static let sectionHeaderHeight: CGFloat = 48.0
             static let sectionFooterHeight: CGFloat = 0.0
-            static let rowHeight: CGFloat = 50.0
+            static let rowHeight: CGFloat = 48.0
         }
     }
     
