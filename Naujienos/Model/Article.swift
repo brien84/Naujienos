@@ -31,10 +31,10 @@ extension Date {
         if let days = components.day, days > 0 {
             let remainder = days % 10
             switch true {
-            case remainder == 0:
-                return "prieš \(days) dienų"
-            case remainder == 1,
+            case remainder == 0,
                  11...19 ~= days:
+                return "prieš \(days) dienų"
+            case remainder == 1:
                 return "prieš \(days) dieną"
             default:
                 return "prieš \(days) dienas"
@@ -44,10 +44,10 @@ extension Date {
         if let hours = components.hour, hours > 0 {
             let remainder = hours % 10
             switch true {
-            case remainder == 0:
-                return "prieš \(hours) valandų"
-            case remainder == 1,
+            case remainder == 0,
                  11...19 ~= hours:
+                return "prieš \(hours) valandų"
+            case remainder == 1:
                 return "prieš \(hours) valandą"
             default:
                 return "prieš \(hours) valandas"
@@ -57,10 +57,10 @@ extension Date {
         if let minutes = components.minute, minutes > 0 {
             let remainder = minutes % 10
             switch true {
-            case remainder == 0:
-                return "prieš \(minutes) minučių"
-            case remainder == 1,
+            case remainder == 0,
                  11...19 ~= minutes:
+                return "prieš \(minutes) minučių"
+            case remainder == 1:
                 return "prieš \(minutes) minutę"
             default:
                 return "prieš \(minutes) minutes"

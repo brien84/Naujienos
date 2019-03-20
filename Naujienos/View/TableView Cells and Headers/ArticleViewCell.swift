@@ -26,7 +26,7 @@ class ArticleViewCell: UITableViewCell {
         self.bookmarkButton.isSelected = false
     }
     
-    /// Resize Font sizes according to Accessibility settings.
+    /// Resizes Font sizes according to Accessibility settings.
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         

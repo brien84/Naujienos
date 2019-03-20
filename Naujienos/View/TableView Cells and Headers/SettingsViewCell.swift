@@ -18,7 +18,7 @@ class SettingsViewCell: UITableViewCell {
         self.tintColor = Constants.Colors.red
     }
     
-    /// Resize Font sizes according to Accessibility settings.
+    /// Resizes Font sizes according to Accessibility settings.
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         

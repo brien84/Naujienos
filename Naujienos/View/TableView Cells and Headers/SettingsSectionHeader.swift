@@ -35,7 +35,7 @@ class SettingsSectionHeader: UITableViewHeaderFooterView {
         collapsionIndicator.image = isCollapsed ? UIImage(named: "sectionCollapsed") : UIImage(named: "sectionExpanded")
     }
     
-    /// Resize Font sizes according to Accessibility settings.
+    /// Resizes Font sizes according to Accessibility settings.
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         

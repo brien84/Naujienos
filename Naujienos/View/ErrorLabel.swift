@@ -31,7 +31,7 @@ class ErrorLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// Resize Font sizes according to Accessibility settings.
+    /// Resizes Font sizes according to Accessibility settings.
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
