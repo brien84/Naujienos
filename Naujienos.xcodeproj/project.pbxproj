@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				294E4C3F2236E8AD000FA89A /* Controllers */,
-				294E4C412236E8CF000FA89A /* Model */,
-				294E4C402236E8C1000FA89A /* View */,
+				294E4C412236E8CF000FA89A /* Models */,
+				294E4C402236E8C1000FA89A /* Views */,
 				294E4C3E2236E832000FA89A /* Supporting Files */,
 				293CBCBD22346A4900FDB81D /* AppDelegate.swift */,
 				293CBCC422346A4A00FDB81D /* Assets.xcassets */,
@@ -166,7 +166,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		294E4C402236E8C1000FA89A /* View */ = {
+		294E4C402236E8C1000FA89A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				294E4C5E2238533F000FA89A /* BookmarkButton.swift */,
@@ -175,10 +175,10 @@
 				294E4C662239A5C9000FA89A /* NetworkImageView.swift */,
 				294E4C76223D1CF8000FA89A /* TableView Cells and Headers */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		294E4C412236E8CF000FA89A /* Model */ = {
+		294E4C412236E8CF000FA89A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				294E4C4C2237FF1A000FA89A /* Article.swift */,
@@ -186,7 +186,7 @@
 				294E4C5A2238500F000FA89A /* Bookmarks.swift */,
 				294E4C442236FCAF000FA89A /* Settings.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		294E4C76223D1CF8000FA89A /* TableView Cells and Headers */ = {

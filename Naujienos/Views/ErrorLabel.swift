@@ -11,10 +11,10 @@ import UIKit
 class ErrorLabel: UILabel {
 
     enum Error: String {
-        case Network = "Nepavyko pasiekti naujienų serverio"
-        case EmptyDatasource = "Pasirinktoms rubrikoms naujienų nėra"
-        case EmptyBookmarks = "Išsaugotų naujienų nėra"
-        case WebViewError = "Nepavyko atidaryti naujienos"
+        case network = "Nepavyko pasiekti naujienų serverio"
+        case emptyDatasource = "Pasirinktoms rubrikoms naujienų nėra"
+        case emptyBookmarks = "Išsaugotų naujienų nėra"
+        case webViewError = "Nepavyko atidaryti naujienos"
     }
     
     init(frame: CGRect, error: Error) {

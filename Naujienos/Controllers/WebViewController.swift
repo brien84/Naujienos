@@ -51,7 +51,7 @@ class WebViewController: UIViewController {
     }
     
     private func displayWebViewError() {
-        let label = ErrorLabel(frame: self.view.bounds, error: .WebViewError)
+        let label = ErrorLabel(frame: self.view.bounds, error: .webViewError)
         webView.addSubview(label)
         loadingBar.isHidden = true
     }

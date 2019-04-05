@@ -22,7 +22,7 @@ class BookmarksViewController: ArticleViewController {
         
         /// If datasource is empty, displays an error.
         if datasource.count == 0 {
-            let label = ErrorLabel(frame: self.view.bounds, error: .EmptyBookmarks)
+            let label = ErrorLabel(frame: self.view.bounds, error: .emptyBookmarks)
             self.view.addSubview(label)
         }
     }

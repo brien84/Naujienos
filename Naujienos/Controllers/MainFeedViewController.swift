@@ -93,10 +93,10 @@ extension MainFeedViewController: FetcherDelegate {
         
         /// If ArticleFetcher returns error or if datasource is empty, displays respective error.
         if error != nil {
-            let label = ErrorLabel(frame: tableView.bounds, error: .Network)
+            let label = ErrorLabel(frame: tableView.bounds, error: .network)
             tableView.backgroundView = label
         } else if datasource.count == 0 {
-            let label = ErrorLabel(frame: tableView.bounds, error: .EmptyDatasource)
+            let label = ErrorLabel(frame: tableView.bounds, error: .emptyDatasource)
             tableView.backgroundView = label
         }
         

@@ -16,7 +16,7 @@ class ArticleViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.register(UINib(nibName: "ArticleViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         tableView.backgroundColor = Constants.Colors.backgroundGray
         tableView.estimatedRowHeight = Constants.TableView.Article.estimatedRowHeight
