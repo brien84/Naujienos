@@ -136,10 +136,8 @@
 		293CBCD122346A4A00FDB81D /* NaujienosTests */ = {
 			isa = PBXGroup;
 			children = (
-				294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */,
-				294E4C5C22385026000FA89A /* BookmarksTests.swift */,
+				29F5426D225926E100A0E7CF /* ModelsTests */,
 				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
-				294E4C462236FCC4000FA89A /* SettingsTests.swift */,
 				293CBCD422346A4A00FDB81D /* Info.plist */,
 			);
 			path = NaujienosTests;
@@ -200,6 +198,16 @@
 				294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */,
 			);
 			path = "TableView Cells and Headers";
+			sourceTree = "<group>";
+		};
+		29F5426D225926E100A0E7CF /* ModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */,
+				294E4C5C22385026000FA89A /* BookmarksTests.swift */,
+				294E4C462236FCC4000FA89A /* SettingsTests.swift */,
+			);
+			path = ModelsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

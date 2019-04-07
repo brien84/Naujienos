@@ -11,12 +11,12 @@ import Foundation
 /// Manages bookmarked Articles and persists them in Bookmarks.plist file.
 /// When instance of Bookmarks is created, it decodes data from plist file into array of Article.
 /// Once Article is added to or removed from the array, instance encodes modified array to the Bookmarks.plist.
-struct Bookmarks {
+class Bookmarks {
     
     var articles = [Article]()
     
     /// Called on init!
-    private mutating func load() {
+    func load() {
         guard let filePath = Constants.URLs.bookmarks else { return }
         if let data = try? Data(contentsOf: filePath) {
             let decoder = PropertyListDecoder()
@@ -28,7 +28,7 @@ struct Bookmarks {
         }
     }
     
-    private func save() {
+    func save() {
         guard let filePath = Constants.URLs.bookmarks else { return }
         let encoder = PropertyListEncoder()
         do {
@@ -39,12 +39,12 @@ struct Bookmarks {
         }
     }
     
-    mutating func add(_ article: Article) {
+    func add(_ article: Article) {
         articles.append(article)
         self.save()
     }
     
-    mutating func remove(_ article: Article) {
+    func remove(_ article: Article) {
         articles = articles.filter { $0.url != article.url }
         self.save()
     }
