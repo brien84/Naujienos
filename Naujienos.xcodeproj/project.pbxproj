@@ -10,20 +10,16 @@
 		293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCBD22346A4900FDB81D /* AppDelegate.swift */; };
 		293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC422346A4A00FDB81D /* Assets.xcassets */; };
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
-		293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCD222346A4A00FDB81D /* NaujienosTests.swift */; };
 		294E4C3D2236E810000FA89A /* DefaultSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C3C2236E810000FA89A /* DefaultSettings.plist */; };
 		294E4C452236FCAF000FA89A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C442236FCAF000FA89A /* Settings.swift */; };
-		294E4C472236FCC4000FA89A /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C462236FCC4000FA89A /* SettingsTests.swift */; };
 		294E4C4B223701FF000FA89A /* Constants and Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4A223701FF000FA89A /* Constants and Extensions.swift */; };
 		294E4C4D2237FF1A000FA89A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4C2237FF1A000FA89A /* Article.swift */; };
 		294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */; };
-		294E4C51223829DD000FA89A /* ArticleFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */; };
 		294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5222382B04000FA89A /* ArticleViewController.swift */; };
 		294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5422382F1C000FA89A /* ArticleViewCell.swift */; };
 		294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C5522382F1C000FA89A /* ArticleViewCell.xib */; };
 		294E4C5922383998000FA89A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5822383998000FA89A /* SettingsViewController.swift */; };
 		294E4C5B2238500F000FA89A /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5A2238500F000FA89A /* Bookmarks.swift */; };
-		294E4C5D22385026000FA89A /* BookmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5C22385026000FA89A /* BookmarksTests.swift */; };
 		294E4C5F2238533F000FA89A /* BookmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5E2238533F000FA89A /* BookmarkButton.swift */; };
 		294E4C6122397508000FA89A /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6022397508000FA89A /* MainFeedViewController.swift */; };
 		294E4C6322397C02000FA89A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C6222397C02000FA89A /* BookmarksViewController.swift */; };
@@ -37,38 +33,22 @@
 		294E4C80223ED809000FA89A /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7F223ED809000FA89A /* ErrorLabel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		293CBCCF22346A4A00FDB81D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 293CBCB222346A4900FDB81D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 293CBCB922346A4900FDB81D;
-			remoteInfo = Naujienos;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		293CBCBA22346A4900FDB81D /* Naujienos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naujienos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293CBCBD22346A4900FDB81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293CBCC422346A4A00FDB81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293CBCC722346A4A00FDB81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293CBCC922346A4A00FDB81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		293CBCCE22346A4A00FDB81D /* NaujienosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaujienosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		293CBCD222346A4A00FDB81D /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
-		293CBCD422346A4A00FDB81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		294E4C3C2236E810000FA89A /* DefaultSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DefaultSettings.plist; sourceTree = "<group>"; };
 		294E4C442236FCAF000FA89A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		294E4C462236FCC4000FA89A /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		294E4C4A223701FF000FA89A /* Constants and Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants and Extensions.swift"; sourceTree = "<group>"; };
 		294E4C4C2237FF1A000FA89A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetcher.swift; sourceTree = "<group>"; };
-		294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetcherTests.swift; sourceTree = "<group>"; };
 		294E4C5222382B04000FA89A /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		294E4C5422382F1C000FA89A /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		294E4C5522382F1C000FA89A /* ArticleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
 		294E4C5822383998000FA89A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		294E4C5A2238500F000FA89A /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
-		294E4C5C22385026000FA89A /* BookmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTests.swift; sourceTree = "<group>"; };
 		294E4C5E2238533F000FA89A /* BookmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkButton.swift; sourceTree = "<group>"; };
 		294E4C6022397508000FA89A /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
 		294E4C6222397C02000FA89A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
@@ -90,13 +70,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		293CBCCB22346A4A00FDB81D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				293CBCBC22346A4900FDB81D /* Naujienos */,
-				293CBCD122346A4A00FDB81D /* NaujienosTests */,
 				293CBCBB22346A4900FDB81D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				293CBCBA22346A4900FDB81D /* Naujienos.app */,
-				293CBCCE22346A4A00FDB81D /* NaujienosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,16 +102,6 @@
 				293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */,
 			);
 			path = Naujienos;
-			sourceTree = "<group>";
-		};
-		293CBCD122346A4A00FDB81D /* NaujienosTests */ = {
-			isa = PBXGroup;
-			children = (
-				29F5426D225926E100A0E7CF /* ModelsTests */,
-				293CBCD222346A4A00FDB81D /* NaujienosTests.swift */,
-				293CBCD422346A4A00FDB81D /* Info.plist */,
-			);
-			path = NaujienosTests;
 			sourceTree = "<group>";
 		};
 		294E4C3E2236E832000FA89A /* Supporting Files */ = {
@@ -200,16 +161,6 @@
 			path = "TableView Cells and Headers";
 			sourceTree = "<group>";
 		};
-		29F5426D225926E100A0E7CF /* ModelsTests */ = {
-			isa = PBXGroup;
-			children = (
-				294E4C50223829DD000FA89A /* ArticleFetcherTests.swift */,
-				294E4C5C22385026000FA89A /* BookmarksTests.swift */,
-				294E4C462236FCC4000FA89A /* SettingsTests.swift */,
-			);
-			path = ModelsTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,24 +181,6 @@
 			productReference = 293CBCBA22346A4900FDB81D /* Naujienos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		293CBCCD22346A4A00FDB81D /* NaujienosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 293CBCDA22346A4A00FDB81D /* Build configuration list for PBXNativeTarget "NaujienosTests" */;
-			buildPhases = (
-				293CBCCA22346A4A00FDB81D /* Sources */,
-				293CBCCB22346A4A00FDB81D /* Frameworks */,
-				293CBCCC22346A4A00FDB81D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				293CBCD022346A4A00FDB81D /* PBXTargetDependency */,
-			);
-			name = NaujienosTests;
-			productName = NaujienosTests;
-			productReference = 293CBCCE22346A4A00FDB81D /* NaujienosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,10 +193,6 @@
 				TargetAttributes = {
 					293CBCB922346A4900FDB81D = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					293CBCCD22346A4A00FDB81D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 293CBCB922346A4900FDB81D;
 					};
 				};
 			};
@@ -281,7 +210,6 @@
 			projectRoot = "";
 			targets = (
 				293CBCB922346A4900FDB81D /* Naujienos */,
-				293CBCCD22346A4A00FDB81D /* NaujienosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,13 +225,6 @@
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */,
 				294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		293CBCCC22346A4A00FDB81D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,26 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		293CBCCA22346A4A00FDB81D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				294E4C472236FCC4000FA89A /* SettingsTests.swift in Sources */,
-				293CBCD322346A4A00FDB81D /* NaujienosTests.swift in Sources */,
-				294E4C51223829DD000FA89A /* ArticleFetcherTests.swift in Sources */,
-				294E4C5D22385026000FA89A /* BookmarksTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		293CBCD022346A4A00FDB81D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 293CBCB922346A4900FDB81D /* Naujienos */;
-			targetProxy = 293CBCCF22346A4A00FDB81D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */ = {
@@ -526,48 +428,6 @@
 			};
 			name = Release;
 		};
-		293CBCDB22346A4A00FDB81D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LZTF7R47SK;
-				INFOPLIST_FILE = NaujienosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.NaujienosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Naujienos.app/Naujienos";
-			};
-			name = Debug;
-		};
-		293CBCDC22346A4A00FDB81D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LZTF7R47SK;
-				INFOPLIST_FILE = NaujienosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.NaujienosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Naujienos.app/Naujienos";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,15 +445,6 @@
 			buildConfigurations = (
 				293CBCD822346A4A00FDB81D /* Debug */,
 				293CBCD922346A4A00FDB81D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		293CBCDA22346A4A00FDB81D /* Build configuration list for PBXNativeTarget "NaujienosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				293CBCDB22346A4A00FDB81D /* Debug */,
-				293CBCDC22346A4A00FDB81D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
