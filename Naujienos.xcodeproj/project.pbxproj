@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293826AC23743BB200F99A05 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293826AB23743BB200F99A05 /* ArticleManager.swift */; };
+		293826AE23743BCF00F99A05 /* ArticleManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293826AD23743BCF00F99A05 /* ArticleManagerTests.swift */; };
+		293826B02374A16100F99A05 /* ArticleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293826AF2374A16100F99A05 /* ArticleViewControllerTests.swift */; };
+		293826B22374ACA500F99A05 /* MainFeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293826B12374ACA500F99A05 /* MainFeedViewControllerTests.swift */; };
 		293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CBCBD22346A4900FDB81D /* AppDelegate.swift */; };
 		293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC422346A4A00FDB81D /* Assets.xcassets */; };
 		293CBCC822346A4A00FDB81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */; };
@@ -31,9 +35,24 @@
 		294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */; };
 		294E4C7E223D802F000FA89A /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7D223D802F000FA89A /* NavigationTitleView.swift */; };
 		294E4C80223ED809000FA89A /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7F223ED809000FA89A /* ErrorLabel.swift */; };
+		2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974FAEC237215FB0002D707 /* NaujienosTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2974FAEF237215FB0002D707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293CBCB222346A4900FDB81D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293CBCB922346A4900FDB81D;
+			remoteInfo = Naujienos;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		293826AB23743BB200F99A05 /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		293826AD23743BCF00F99A05 /* ArticleManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManagerTests.swift; sourceTree = "<group>"; };
+		293826AF2374A16100F99A05 /* ArticleViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewControllerTests.swift; sourceTree = "<group>"; };
+		293826B12374ACA500F99A05 /* MainFeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewControllerTests.swift; sourceTree = "<group>"; };
 		293CBCBA22346A4900FDB81D /* Naujienos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naujienos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293CBCBD22346A4900FDB81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293CBCC422346A4A00FDB81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +79,9 @@
 		294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
 		294E4C7D223D802F000FA89A /* NavigationTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		294E4C7F223ED809000FA89A /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
+		2974FAEA237215FB0002D707 /* NaujienosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaujienosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2974FAEC237215FB0002D707 /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
+		2974FAEE237215FB0002D707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +92,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2974FAE7237215FB0002D707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293826AA2374393A00F99A05 /* ControllersTests */ = {
+			isa = PBXGroup;
+			children = (
+				293826AF2374A16100F99A05 /* ArticleViewControllerTests.swift */,
+				293826B12374ACA500F99A05 /* MainFeedViewControllerTests.swift */,
+			);
+			path = ControllersTests;
+			sourceTree = "<group>";
+		};
 		293CBCB122346A4900FDB81D = {
 			isa = PBXGroup;
 			children = (
 				293CBCBC22346A4900FDB81D /* Naujienos */,
+				2974FAEB237215FB0002D707 /* NaujienosTests */,
 				293CBCBB22346A4900FDB81D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				293CBCBA22346A4900FDB81D /* Naujienos.app */,
+				2974FAEA237215FB0002D707 /* NaujienosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +182,7 @@
 			children = (
 				294E4C4C2237FF1A000FA89A /* Article.swift */,
 				294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */,
+				293826AB23743BB200F99A05 /* ArticleManager.swift */,
 				294E4C5A2238500F000FA89A /* Bookmarks.swift */,
 				294E4C442236FCAF000FA89A /* Settings.swift */,
 			);
@@ -159,6 +200,25 @@
 				294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */,
 			);
 			path = "TableView Cells and Headers";
+			sourceTree = "<group>";
+		};
+		2974FAEB237215FB0002D707 /* NaujienosTests */ = {
+			isa = PBXGroup;
+			children = (
+				293826AA2374393A00F99A05 /* ControllersTests */,
+				2974FB3C2373644C0002D707 /* ModelsTests */,
+				2974FAEC237215FB0002D707 /* NaujienosTests.swift */,
+				2974FAEE237215FB0002D707 /* Info.plist */,
+			);
+			path = NaujienosTests;
+			sourceTree = "<group>";
+		};
+		2974FB3C2373644C0002D707 /* ModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				293826AD23743BCF00F99A05 /* ArticleManagerTests.swift */,
+			);
+			path = ModelsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,18 +241,40 @@
 			productReference = 293CBCBA22346A4900FDB81D /* Naujienos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2974FAE9237215FB0002D707 /* NaujienosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2974FAF3237215FB0002D707 /* Build configuration list for PBXNativeTarget "NaujienosTests" */;
+			buildPhases = (
+				2974FAE6237215FB0002D707 /* Sources */,
+				2974FAE7237215FB0002D707 /* Frameworks */,
+				2974FAE8237215FB0002D707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2974FAF0237215FB0002D707 /* PBXTargetDependency */,
+			);
+			name = NaujienosTests;
+			productName = NaujienosTests;
+			productReference = 2974FAEA237215FB0002D707 /* NaujienosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		293CBCB222346A4900FDB81D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Marius;
 				TargetAttributes = {
 					293CBCB922346A4900FDB81D = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					2974FAE9237215FB0002D707 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 293CBCB922346A4900FDB81D;
 					};
 				};
 			};
@@ -210,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				293CBCB922346A4900FDB81D /* Naujienos */,
+				2974FAE9237215FB0002D707 /* NaujienosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +308,13 @@
 				293CBCC522346A4A00FDB81D /* Assets.xcassets in Resources */,
 				294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */,
 				294E4C73223C44CD000FA89A /* SettingsSectionHeader.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2974FAE8237215FB0002D707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +336,7 @@
 				294E4C71223C35F1000FA89A /* SettingsSectionHeader.swift in Sources */,
 				294E4C6122397508000FA89A /* MainFeedViewController.swift in Sources */,
 				294E4C672239A5C9000FA89A /* NetworkImageView.swift in Sources */,
+				293826AC23743BB200F99A05 /* ArticleManager.swift in Sources */,
 				294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 				294E4C4B223701FF000FA89A /* Constants and Extensions.swift in Sources */,
@@ -256,7 +347,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2974FAE6237215FB0002D707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293826AE23743BCF00F99A05 /* ArticleManagerTests.swift in Sources */,
+				293826B22374ACA500F99A05 /* MainFeedViewControllerTests.swift in Sources */,
+				293826B02374A16100F99A05 /* ArticleViewControllerTests.swift in Sources */,
+				2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2974FAF0237215FB0002D707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293CBCB922346A4900FDB81D /* Naujienos */;
+			targetProxy = 2974FAEF237215FB0002D707 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		293CBCC622346A4A00FDB81D /* LaunchScreen.storyboard */ = {
@@ -428,6 +538,48 @@
 			};
 			name = Release;
 		};
+		2974FAF1237215FB0002D707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZTF7R47SK;
+				INFOPLIST_FILE = NaujienosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.NaujienosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Naujienos.app/Naujienos";
+			};
+			name = Debug;
+		};
+		2974FAF2237215FB0002D707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZTF7R47SK;
+				INFOPLIST_FILE = NaujienosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.NaujienosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Naujienos.app/Naujienos";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,6 +597,15 @@
 			buildConfigurations = (
 				293CBCD822346A4A00FDB81D /* Debug */,
 				293CBCD922346A4A00FDB81D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2974FAF3237215FB0002D707 /* Build configuration list for PBXNativeTarget "NaujienosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2974FAF1237215FB0002D707 /* Debug */,
+				2974FAF2237215FB0002D707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
