@@ -9,8 +9,12 @@
 import Foundation
 
 class SettingsItem: Codable {
-    var provider: String
+    let provider: String
     var categories: [String: Bool]
+    
+    func getEnabledCategories() -> [String] {
+        return categories.compactMap { $0.value ? $0.key : nil }
+    }
 }
 
 /// When Settings instance is created, it decodes Settings.plist to array of SettingsItems.
@@ -21,33 +25,34 @@ class SettingsItem: Codable {
 /// DefaultSettings.plist can be found in app bundle.
 struct Settings {
     
+    private var plist: URL!
+    
     var items = [SettingsItem]()
     
-    /// Called on init!
-    private mutating func load() {
-        guard let filePath = Constants.URLs.settings else { return }
-        if let data = try? Data(contentsOf: filePath) {
+    init(plist: URL = Constants.URLs.settings) {
+        self.plist = plist
+        
+        self.load()
+    }
+    
+    mutating func load() {
+        if let data = try? Data(contentsOf: plist) {
             let decoder = PropertyListDecoder()
             do {
                 items = try decoder.decode([SettingsItem].self, from: data)
             } catch {
-                print("Error decoding settings, \(error)")
+                print("Error decoding [SettingsItem]: \(error)")
             }
         }
     }
     
     func save() {
-        guard let filePath = Constants.URLs.settings else { return }
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(items)
-            try data.write(to: filePath)
+            try data.write(to: plist)
         } catch {
-            print("Error encoding settings, \(error)")
+            print("Error encoding [SettingsItem]: \(error)")
         }
-    }
-    
-    init() {
-        self.load()
     }
 }

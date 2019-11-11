@@ -42,16 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// Checks if Settings file already exists and if not creates Settings.plist from bundle file DefaultSettings.plist.
     private func createDefaultSettings() {
-        guard let settingsFilePath = Constants.URLs.settings?.path else {
-            fatalError("Could not construct Settings file path.")
-        }
+        let settingsFilePath = Constants.URLs.settings.path
         
         let fileManager = FileManager.default
         
         if !fileManager.fileExists(atPath: settingsFilePath) {
-            guard let defaultsPath = Bundle.main.path(forResource: "DefaultSettings", ofType: "plist") else {
-                fatalError("Could not find DefaultSettings.plist in bundle.")
-            }
+            guard let defaultsPath = Bundle.main.path(forResource: "DefaultSettings", ofType: "plist")
+                else { fatalError("Could not find DefaultSettings.plist in bundle.") }
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: defaultsPath))
                 fileManager.createFile(atPath: settingsFilePath, contents: data)
