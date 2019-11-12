@@ -62,6 +62,6 @@ struct Constants {
         static let server: URL? = URL(string: "https://news.ioys.lt/get")
         //static let server: URL? = URL(string: "http://localhost:8080/get")
         static let settings: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Settings.plist"))!
-        static let bookmarks: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Bookmarks.plist")
+        static let bookmarks: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Bookmarks.plist"))!
     }
 }

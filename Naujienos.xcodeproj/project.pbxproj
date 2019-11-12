@@ -36,6 +36,10 @@
 		294E4C7E223D802F000FA89A /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7D223D802F000FA89A /* NavigationTitleView.swift */; };
 		294E4C80223ED809000FA89A /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7F223ED809000FA89A /* ErrorLabel.swift */; };
 		2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974FAEC237215FB0002D707 /* NaujienosTests.swift */; };
+		29B9C9502379A1820035EF0B /* BookmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C94F2379A1820035EF0B /* BookmarksTests.swift */; };
+		29B9C9522379E4890035EF0B /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C9512379E4890035EF0B /* SettingsTests.swift */; };
+		29B9C9542379E49B0035EF0B /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C9532379E49B0035EF0B /* SettingsViewControllerTests.swift */; };
+		29B9C9562379E4B20035EF0B /* BookmarksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C9552379E4B20035EF0B /* BookmarksViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		2974FAEA237215FB0002D707 /* NaujienosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaujienosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2974FAEC237215FB0002D707 /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
 		2974FAEE237215FB0002D707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B9C94F2379A1820035EF0B /* BookmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTests.swift; sourceTree = "<group>"; };
+		29B9C9512379E4890035EF0B /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
+		29B9C9532379E49B0035EF0B /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		29B9C9552379E4B20035EF0B /* BookmarksViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				293826AF2374A16100F99A05 /* ArticleViewControllerTests.swift */,
+				29B9C9552379E4B20035EF0B /* BookmarksViewControllerTests.swift */,
 				293826B12374ACA500F99A05 /* MainFeedViewControllerTests.swift */,
+				29B9C9532379E49B0035EF0B /* SettingsViewControllerTests.swift */,
 			);
 			path = ControllersTests;
 			sourceTree = "<group>";
@@ -217,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				293826AD23743BCF00F99A05 /* ArticleManagerTests.swift */,
+				29B9C94F2379A1820035EF0B /* BookmarksTests.swift */,
+				29B9C9512379E4890035EF0B /* SettingsTests.swift */,
 			);
 			path = ModelsTests;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				TargetAttributes = {
 					293CBCB922346A4900FDB81D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1120;
 					};
 					2974FAE9237215FB0002D707 = {
 						CreatedOnToolsVersion = 10.3;
@@ -351,7 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B9C9562379E4B20035EF0B /* BookmarksViewControllerTests.swift in Sources */,
+				29B9C9542379E49B0035EF0B /* SettingsViewControllerTests.swift in Sources */,
+				29B9C9522379E4890035EF0B /* SettingsTests.swift in Sources */,
 				293826AE23743BCF00F99A05 /* ArticleManagerTests.swift in Sources */,
+				29B9C9502379A1820035EF0B /* BookmarksTests.swift in Sources */,
 				293826B22374ACA500F99A05 /* MainFeedViewControllerTests.swift in Sources */,
 				293826B02374A16100F99A05 /* ArticleViewControllerTests.swift in Sources */,
 				2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */,
@@ -431,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -486,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -512,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.Naujienos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -533,7 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MariusK.Naujienos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
