@@ -14,10 +14,6 @@ struct Section {
     var isCollapsed: Bool
 }
 
-protocol SettingsDelegate: AnyObject {
-    func settingsUpdated()
-}
-
 /// Loads Settings instance, maps SettingsItems to datasource array of Section,
 /// then displays datasource in TableView.
 /// Selecting rows switches SettingsItem categories bool property's value.
@@ -28,38 +24,39 @@ protocol SettingsDelegate: AnyObject {
 /// and only use Settings instance for loading and saving SettingsItems.
 class SettingsViewController: UITableViewController {
     
-    weak var delegate: SettingsDelegate?
+    var datasource = [Section]()
+    private var settings: SettingsProtocol!
     
-    private let settings = Settings()
-    private var datasource = [Section]()
+    init(style: UITableView.Style = .plain, settings: SettingsProtocol = Settings()) {
+        super.init(style: .plain)
+        self.settings = settings
+    }
     
-    private var changesMade = false
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = Constants.NavigationControllerTitles.settings
         
-        /// Adds SettingsItem to datasource array. By default all items are collapsed.
-        settings.items.forEach { datasource.append(Section(item: $0, isCollapsed: true)) }
+        setupTableView()
         
-        /// Setup TableView.
+        /// Adds SettingsItem to datasource array. By default all items are collapsed.
+        datasource = settings.items.map { Section(item: $0, isCollapsed: true) }
+    }
+    
+    private func setupTableView() {
         tableView.register(UINib(nibName: "SettingsSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
         tableView.register(UINib(nibName: "SettingsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.tableFooterView = UIView()
         tableView.backgroundColor = Constants.Colors.backgroundWhite
         tableView.sectionHeaderHeight = Constants.TableView.Settings.sectionHeaderHeight
         tableView.sectionFooterHeight = Constants.TableView.Settings.sectionFooterHeight
         tableView.rowHeight = Constants.TableView.Settings.rowHeight
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if changesMade {
-            settings.save()
-            delegate?.settingsUpdated()
-        }
-    }
-    
+        
     override func numberOfSections(in tableView: UITableView) -> Int {
         return datasource.count
     }
@@ -96,17 +93,26 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        changesMade = true
-
         let item = datasource[indexPath.section].item
         let categoryKeys = item.categories.keys.sorted()
         let categoryName = categoryKeys[indexPath.row]
         
         if let isCategorySelected = item.categories[categoryName] {
             item.categories[categoryName] = !isCategorySelected
-            tableView.reloadRows(at: [indexPath], with: .automatic)
+            settings.save()
+            sendUpdateNotification()
         }
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
+    
+    func sendUpdateNotification() {
+        NotificationCenter.default.post(name: .settingsDidUpdate, object: nil)
+    }
+}
+
+extension Notification.Name {
+    static let settingsDidUpdate = Notification.Name("settingsDidUpdate")
 }
 
 extension SettingsViewController: SettingsSectionHeaderDelegate {
