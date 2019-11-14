@@ -12,11 +12,29 @@ private enum NetworkError: Error {
     case badData
 }
 
-class ArticleManager {
+protocol ArticleManagerProtocol {
+    var articles: [Article] { get set }
+    
+    func getArticles(with settings: [SettingsItem]) -> [Article]
+    func fetch(using session: URLSession, completionHandler: @escaping (Result<Void, Error>) -> Void)
+}
+
+class ArticleManager: ArticleManagerProtocol {
     
     var articles = [Article]()
     
+    func getArticles(with settings: [SettingsItem]) -> [Article] {
+        return settings.flatMap { item  -> [Article] in
+            let categories = item.getEnabledCategories()
+            
+            return articles.filter { $0.provider == item.provider && categories.contains($0.category) }
+        }
+    }
+    
     func fetch(using session: URLSession = .shared, completionHandler: @escaping (Result<Void, Error>) -> Void) {
+        
+        articles.removeAll()
+        
         let task = session.dataTask(with: Constants.URLs.API) { data, response, error in
             if let data = data {
                 
@@ -28,7 +46,6 @@ class ArticleManager {
                     self.articles = try decoder.decode([Article].self, from: data)
                     completionHandler(.success(()))
                 } catch {
-                    print("Error decoding articles, \(error)")
                     completionHandler(.failure(error))
                 }
                 
