@@ -169,7 +169,7 @@ class BookmarksTests: XCTestCase {
     }
     
     private var newArticle: Article {
-        return Article(url: URL(string: "some.url")!,
+        return Article(url: URL(string: "some.url/\(UUID().uuidString)")!,
                        title: "someTitle",
                        date: Date(),
                        description: "someDescription",
@@ -180,13 +180,13 @@ class BookmarksTests: XCTestCase {
 
     private struct TestData {
         static let empty = [[String: Any]]()
-        static let oneEntry = [["category": "_main",
-                                "provider": "15min",
+        static let oneEntry = [["url": ["relative": "some.url"],
                                 "title": "someTitle",
                                 "date": Date(),
-                                "imageURL": ["relative": "some.url"],
                                 "description": "someDescription",
-                                "url": ["relative": "some.url"]
+                                "imageURL": ["relative": "some.url"],
+                                "provider": "15min",
+                                "category": "_main",
                             ]]
     }
 }
