@@ -18,7 +18,6 @@
 		294E4C452236FCAF000FA89A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C442236FCAF000FA89A /* Settings.swift */; };
 		294E4C4B223701FF000FA89A /* Constants and Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4A223701FF000FA89A /* Constants and Extensions.swift */; };
 		294E4C4D2237FF1A000FA89A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4C2237FF1A000FA89A /* Article.swift */; };
-		294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */; };
 		294E4C5322382B04000FA89A /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5222382B04000FA89A /* ArticleViewController.swift */; };
 		294E4C5622382F1C000FA89A /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C5422382F1C000FA89A /* ArticleViewCell.swift */; };
 		294E4C5722382F1C000FA89A /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C5522382F1C000FA89A /* ArticleViewCell.xib */; };
@@ -66,7 +65,6 @@
 		294E4C442236FCAF000FA89A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		294E4C4A223701FF000FA89A /* Constants and Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants and Extensions.swift"; sourceTree = "<group>"; };
 		294E4C4C2237FF1A000FA89A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetcher.swift; sourceTree = "<group>"; };
 		294E4C5222382B04000FA89A /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		294E4C5422382F1C000FA89A /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		294E4C5522382F1C000FA89A /* ArticleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				294E4C4C2237FF1A000FA89A /* Article.swift */,
-				294E4C4E2237FFE5000FA89A /* ArticleFetcher.swift */,
 				293826AB23743BB200F99A05 /* ArticleManager.swift */,
 				294E4C5A2238500F000FA89A /* Bookmarks.swift */,
 				294E4C442236FCAF000FA89A /* Settings.swift */,
@@ -350,7 +347,6 @@
 				294E4C6122397508000FA89A /* MainFeedViewController.swift in Sources */,
 				294E4C672239A5C9000FA89A /* NetworkImageView.swift in Sources */,
 				293826AC23743BB200F99A05 /* ArticleManager.swift in Sources */,
-				294E4C4F2237FFE5000FA89A /* ArticleFetcher.swift in Sources */,
 				293CBCBE22346A4900FDB81D /* AppDelegate.swift in Sources */,
 				294E4C4B223701FF000FA89A /* Constants and Extensions.swift in Sources */,
 				294E4C4D2237FF1A000FA89A /* Article.swift in Sources */,
