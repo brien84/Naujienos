@@ -14,12 +14,12 @@ class SettingsTests: XCTestCase {
     var sut: Settings!
 
     override func setUp() {
-        createSettingsFileCopyForTesting()
+        createSettingsTestFile()
         sut = Settings(plist: settingsTestFile)
     }
 
     override func tearDown() {
-        deleteSettingsFileCopy()
+        deleteSettingsTestFile()
         sut = nil
     }
     
@@ -73,7 +73,7 @@ class SettingsTests: XCTestCase {
     
     private let settingsTestFile = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("TestSettings.plist"))!
     
-    private func createSettingsFileCopyForTesting() {
+    private func createSettingsTestFile() {
         guard let defaultsPath = Bundle.main.path(forResource: "DefaultSettings", ofType: "plist")
             else { fatalError("Could not find DefaultSettings.plist in bundle.") }
         
@@ -85,7 +85,7 @@ class SettingsTests: XCTestCase {
         }
     }
     
-    private func deleteSettingsFileCopy() {
+    private func deleteSettingsTestFile() {
         try? FileManager.default.removeItem(at: settingsTestFile)
     }
 }
