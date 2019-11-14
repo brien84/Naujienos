@@ -169,11 +169,11 @@ class BookmarksTests: XCTestCase {
     }
     
     private var newArticle: Article {
-        return Article(url: URL(string: "someUrl.url")!,
+        return Article(url: URL(string: "some.url")!,
                        title: "someTitle",
                        date: Date(),
                        description: "someDescription",
-                       imageURL: URL(string: "someUrl.url")!,
+                       imageURL: URL(string: "some.url")!,
                        provider: "someProvider",
                        category: "someCategory")
     }
@@ -184,9 +184,9 @@ class BookmarksTests: XCTestCase {
                                 "provider": "15min",
                                 "title": "someTitle",
                                 "date": Date(),
-                                "imageURL": ["relative": "lpdsa.lt"],
+                                "imageURL": ["relative": "some.url"],
                                 "description": "someDescription",
-                                "url": ["relative": "sssss.lt"]
+                                "url": ["relative": "some.url"]
                             ]]
     }
 }

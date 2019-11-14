@@ -8,21 +8,33 @@
 
 import Foundation
 
+protocol BookmarksProtocol {
+    var plist: URL { get set }
+    var articles: [Article] { get set }
+    
+    mutating func load()
+    func save()
+    func getArticles() -> [Article]
+    mutating func add(_ article: Article)
+    mutating func remove(_ article: Article)
+    func contains(_ article: Article) -> Bool
+    func sendUpdateNotification()
+}
+
 /// Manages bookmarked Articles and persists them in Bookmarks.plist file.
 /// When instance of Bookmarks is created, it decodes data from plist file into array of Article.
 /// Once Article is added to or removed from the array, instance encodes modified array to the Bookmarks.plist.
-class Bookmarks {
+struct Bookmarks: BookmarksProtocol {
     
-    private var plist: URL!
-    
-    private var articles = [Article]()
+    var plist: URL
+    var articles = [Article]()
     
     init(plist: URL = Constants.URLs.bookmarks) {
         self.plist = plist
         self.load()
     }
     
-    func load() {
+    mutating func load() {
         if let data = try? Data(contentsOf: plist) {
             let decoder = PropertyListDecoder()
             do {
@@ -33,7 +45,7 @@ class Bookmarks {
         }
     }
     
-    private func save() {
+    func save() {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(articles)
@@ -47,13 +59,13 @@ class Bookmarks {
         return articles
     }
     
-    func add(_ article: Article) {
+    mutating func add(_ article: Article) {
         articles.append(article)
         self.save()
         sendUpdateNotification()
     }
     
-    func remove(_ article: Article) {
+    mutating func remove(_ article: Article) {
         articles = articles.filter { $0.url != article.url }
         self.save()
         sendUpdateNotification()
@@ -67,7 +79,7 @@ class Bookmarks {
         }
     }
     
-    private func sendUpdateNotification() {
+    func sendUpdateNotification() {
         NotificationCenter.default.post(name: .bookmarksDidUpdate, object: nil)
     }
 }
