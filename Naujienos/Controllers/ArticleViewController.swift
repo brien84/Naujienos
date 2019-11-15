@@ -1,5 +1,5 @@
 //
-//  ArticleViewController.swift
+//  ArticleViewControllerTests.swift
 //  Naujienos
 //
 //  Created by Marius on 12/03/2019.
@@ -8,11 +8,16 @@
 
 import UIKit
 
-/// Displays an array of Article in TableView.
+/// Displays Articles in TableView.
 class ArticleViewController: UITableViewController {
     
-    var datasource = [Article]()
-    var bookmarks: Bookmarks!
+    var datasource = [Article]() {
+        didSet {
+            datasource.sort(by: { $0.date > $1.date})
+        }
+    }
+    
+    var bookmarks: BookmarksProtocol = Bookmarks()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +26,6 @@ class ArticleViewController: UITableViewController {
         tableView.backgroundColor = Constants.Colors.backgroundGray
         tableView.estimatedRowHeight = Constants.TableView.Article.estimatedRowHeight
         tableView.separatorStyle = .none
-    }
-    
-    /// bookmarks property is set in viewWillAppear,
-    /// so it could conveniently be updated on return to root ViewController.
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        bookmarks = Bookmarks()
     }
         
     // MARK: - TableView methods

@@ -34,7 +34,6 @@
 		294E4C7A223D1D4D000FA89A /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4C78223D1D4D000FA89A /* SettingsViewCell.xib */; };
 		294E4C7E223D802F000FA89A /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7D223D802F000FA89A /* NavigationTitleView.swift */; };
 		294E4C80223ED809000FA89A /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294E4C7F223ED809000FA89A /* ErrorLabel.swift */; };
-		2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974FAEC237215FB0002D707 /* NaujienosTests.swift */; };
 		29B9C9502379A1820035EF0B /* BookmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C94F2379A1820035EF0B /* BookmarksTests.swift */; };
 		29B9C9522379E4890035EF0B /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C9512379E4890035EF0B /* SettingsTests.swift */; };
 		29B9C9542379E49B0035EF0B /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9C9532379E49B0035EF0B /* SettingsViewControllerTests.swift */; };
@@ -82,7 +81,6 @@
 		294E4C7D223D802F000FA89A /* NavigationTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		294E4C7F223ED809000FA89A /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
 		2974FAEA237215FB0002D707 /* NaujienosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaujienosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2974FAEC237215FB0002D707 /* NaujienosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaujienosTests.swift; sourceTree = "<group>"; };
 		2974FAEE237215FB0002D707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29B9C94F2379A1820035EF0B /* BookmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTests.swift; sourceTree = "<group>"; };
 		29B9C9512379E4890035EF0B /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				293826AA2374393A00F99A05 /* ControllersTests */,
 				2974FB3C2373644C0002D707 /* ModelsTests */,
-				2974FAEC237215FB0002D707 /* NaujienosTests.swift */,
 				2974FAEE237215FB0002D707 /* Info.plist */,
 			);
 			path = NaujienosTests;
@@ -367,7 +364,6 @@
 				29B9C9502379A1820035EF0B /* BookmarksTests.swift in Sources */,
 				293826B22374ACA500F99A05 /* MainFeedViewControllerTests.swift in Sources */,
 				293826B02374A16100F99A05 /* ArticleViewControllerTests.swift in Sources */,
-				2974FAED237215FB0002D707 /* NaujienosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
