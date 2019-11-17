@@ -29,6 +29,18 @@ class ArticleManagerTests: XCTestCase {
         XCTAssertEqual(articleCount, 0, "articleCount should be 0.")
     }
     
+    func testGetArticlesReturnsAllArticles() {
+        /// given
+        let articleCount = 12
+        sut.articles = createTestArticles(count: articleCount)
+        
+        /// when
+        let returnCount = sut.getArticles(with: settingsItems).count
+        
+        /// then
+        XCTAssertEqual(returnCount, articleCount)
+    }
+    
     func testArticleFetchingWithCorrectResponseData() {
         /// given
         let expectation = XCTestExpectation(description: "Downloading articles")
