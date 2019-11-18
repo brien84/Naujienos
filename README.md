@@ -4,7 +4,7 @@ News reader iOS app written in Swift.
 
 Driven by [NaujienosServer](https://github.com/brien84/NaujienosServer)
 
-![](screenshot.png)
+![](screenshots.png)
 
 ## Features
 - Filter news by category or provider
